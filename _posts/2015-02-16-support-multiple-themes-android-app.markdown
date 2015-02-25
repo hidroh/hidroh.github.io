@@ -82,4 +82,4 @@ To enable consistent color, and make our views and texts ready for multiple them
 </style>
 {% endhighlight %}
 
-That should be sufficient for a simple light-themed material design Android app. In the second part of this blog post, we will make a dark theme and add setting to switch theme during runtime.
+That should be sufficient for a simple light-themed material design Android app. In the [second part]({% post_url 2015-02-25-support-multiple-themes-android-app-part-2 %}) of this blog post, we will make a dark theme and add setting to switch theme during runtime.

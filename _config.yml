@@ -3,7 +3,7 @@ url: http://hidroh.github.io
 description: Tips and tricks, useful patterns and implementations for Android
 
 permalink: /:year/:month/:day/:title/
-paginate: 10
+paginate: 2
 highlighter: pygments
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
