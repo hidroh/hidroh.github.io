@@ -7,10 +7,12 @@ title: About
 
 A full-stack software engineer with more than 5 years experience, focused in mobile (Android) and web development. My experience includes exposure to Scrum agile framework, test-driven development (TDD) and unit testing with PHPUnit and JUnit, behaviour-driven testing with Cucumber, and Jenkins CI.
 
-I am kind of a control freak, and obsessed with testing. I love soccer and motosport. I am a die-hard [*Inter Milan*](http://www.inter.it/en/hp) and [*Valentino Rossi*](http://www.valentinorossi.com/en/) fan.
+I am kind of a control freak, and obsessed with testing. I love soccer and motosport. I am a die-hard [*Inter Milan*](http://www.inter.it/en/hp) and [*Valentino Rossi*](http://www.valentinorossi.com/en/) fan. I sometimes program for fun during my free time (I still go out to socialize of course!).
 
-I sometimes program for fun during my free time (I still go out to socialize of course!). Checkout my [Hacker News](https://news.ycombinator.com/) reader for Android:
-
+Checkout my [Hacker News](https://news.ycombinator.com/) reader for Android:  
 [![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic)
 
-![Materialistic - Hacker News](/assets/materialistic.png)
+Find me on [StackOverflow](http://stackoverflow.com/):  
+<a href="http://stackoverflow.com/users/836540/hidro">
+<img src="http://stackoverflow.com/users/flair/836540.png?theme=dark" alt="profile for hidro at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for hidro at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+</a>
