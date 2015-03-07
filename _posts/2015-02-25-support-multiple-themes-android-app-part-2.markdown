@@ -11,6 +11,8 @@ Ideally, if we treat theme as a configuration, we should be able to specify them
 
 So how should we specify resources for multiple themes? If we look at how resources are organized in [`appcompat`](https://github.com/android/platform_frameworks_support/blob/master/v7/appcompat/res/values/styles.xml), we will have a rough idea of how the Android team organize their theme specific resources. [Materialistic](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic) also employs a similar approach.
 
+### Theming
+
 **values/styles.xml**
 {% highlight xml %}
 <style name="AppTheme" parent="Theme.AppCompat.Light">
@@ -45,7 +47,7 @@ Here we add a new dark theme called `AppTheme.Dark`, and for style and color con
 The two themes should have appropriate (different if applicable) values for base Android and [`appcompat`](https://github.com/android/platform_frameworks_support/blob/master/v7/appcompat/res/values/attrs.xml) theme attributes, e.g. `android:textColorPrimary` for dark theme should be light, and for light theme should be dark. By convention, here we suffix alternative theme colors with `Inverse`.  
 *Tip: Try out your alternative theme by temporary switching `android:theme` for `application` in `AndroidManifest.xml` to see what extra colors/style you need to create. For certain cases a color may look okay in both dark and light theme.*
 
-\*\*\*
+### Theme-specific resources
 
 At this point, we should have a pretty decent dark theme for our app, except for some anomalies here and there, e.g. drawables used for action bar menu items. A dark action bar expects light-color menu items, and vice versa. In order to tell Android to use different drawables for different app themes, we create [custom attributes](http://developer.android.com/training/custom-views/create-view.html#customattr) that allow specifying reference to the correct drawable, and provide different drawable references as values for these custom attributes under different themes (the same way `appcompat` library provides custom attributes such as `colorPrimary`).
 
@@ -89,7 +91,7 @@ Similar implementation can be used to specify most custom attributes you need fo
 
 An alternative approach to avoid duplicating drawable resources for different themes is to use drawable `tint`. This attribute is available from API 21. [Dan Lew in his blog](http://blog.danlew.net/2014/08/18/fast-android-asset-theming-with-colorfilter/) shows how to do this for all API levels. Personally I would prefer to keep my Java implementation free of view logic if possible, so I choose to have different drawable resources per theme.
 
-\*\*\*
+### Dynamic theme switching
 
 Now that we have two polished themes ready to be used, we need to allow users to choose which one they prefer and switch theme dynamically during runtime. This can be done by having a `SharedPreferences`, says `pref_dark_theme` to store theme preference and use its value to decide which theme to apply. Application of theme should be done for all activies, before their views are created, so `onCreate()` is our only option to put the logic.
 
