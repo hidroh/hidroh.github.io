@@ -140,6 +140,3 @@ public class SettingsFragment extends PreferenceFragment {
 {% endhighlight %}
 
 So that's it. Now we have an app with two polished themes for even the most picky users! Head over to [hidroh/materialistic](https://github.com/hidroh/materialistic) GitHub repository to checkout complete implementation!
-
-<img src="/assets/img/multiple-theme-dark.png" width="300px" />{: style="float:left"}
-<img src="/assets/img/multiple-theme-light.png" width="300px" />{: style="float:right"}
