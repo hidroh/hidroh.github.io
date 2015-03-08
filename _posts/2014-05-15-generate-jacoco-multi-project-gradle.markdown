@@ -2,7 +2,7 @@
 layout: post
 title:  "Generate Jacoco coverage for a multi-project Gradle setup"
 date:   2014-05-15 02:08:34
-categories: android jacoco coverage robolectric gradle testing
+tags: android jacoco coverage robolectric gradle testing
 ---
 
 An example of how to configure Jacoco task in your `build.gradle` to generate coverage

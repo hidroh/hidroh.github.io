@@ -2,7 +2,7 @@
 layout: post
 title:  "Supporting multiple themes in your Android app (Part 1)"
 date:   2015-02-16 8:20:34
-categories: android resources theme styleable
+tags: android resources theme styleable
 ---
 
 <img src="/assets/img/multiple-theme-dark.png" width="300px" />{: style="float:left"}

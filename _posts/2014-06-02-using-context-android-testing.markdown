@@ -2,7 +2,7 @@
 layout: post
 title:  "Using context in Android testing"
 date:   2014-06-02 02:08:34
-categories: android tdd context mock patterns testing
+tags: android tdd context mock patterns testing
 ---
 
 If you are keen on doing TDD with Android, you may have stumbled upon the dreaded `java.lang.RuntimeException: Stub!` when you try to test drive your code with different contexts as input. For us, most of the time we use context is to get some resources out of it, either string, bool, raw, you name it. These resources may change execution behavior, and thus we are required to test with different resources to cover all cases.

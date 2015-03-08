@@ -11,8 +11,3 @@ I am kind of a control freak, and obsessed with testing. I love soccer and motos
 
 Checkout my [Hacker News](https://news.ycombinator.com/) reader for Android:  
 [![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic)
-
-Find me on [StackOverflow](http://stackoverflow.com/):  
-<a href="http://stackoverflow.com/users/836540/hidro">
-<img src="http://stackoverflow.com/users/flair/836540.png?theme=dark" alt="profile for hidro at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for hidro at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
-</a>

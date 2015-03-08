@@ -2,7 +2,7 @@
 layout: post
 title:  "Filter Robolectric Android unit tests for faster verification"
 date:   2015-01-31 02:20:34
-categories: android gradle robolectric unit-test
+tags: android gradle robolectric unit-test
 ---
 
 [Robolectric](https://github.com/robolectric/robolectric) is pretty much the de facto unit test framework for Android nowadays. It's great, it's fast (much faster than the out-of-the-box Android instrumentation test), and it gives you back joy of writing unit tests.
