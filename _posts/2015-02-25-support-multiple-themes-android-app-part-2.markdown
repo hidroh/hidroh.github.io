@@ -45,8 +45,12 @@ So how should we specify resources for multiple themes? If we look at how resour
 
 Here we add a new dark theme called `AppTheme.Dark`, and for style and color consistency, we extend from `appcompat`'s theme `Theme.AppCompat` (a dark theme). Unfortunately, since our two themes extend two different base themes, we cannot share any common attributes (the same way a class in Java cannot extend two or more classes).
 
-The two themes should have appropriate (different if applicable) values for base Android and [`appcompat`](https://github.com/android/platform_frameworks_support/blob/master/v7/appcompat/res/values/attrs.xml) theme attributes, e.g. `android:textColorPrimary` for dark theme should be light, and for light theme should be dark. By convention, here we suffix alternative theme colors with `Inverse`.  
-*Tip: Try out your alternative theme by temporary switching `android:theme` for `application` in `AndroidManifest.xml` to see what extra colors/style you need to create. For certain cases a color may look okay in both dark and light theme.*
+The two themes should have appropriate (different if applicable) values for base Android and [`appcompat`](https://github.com/android/platform_frameworks_support/blob/master/v7/appcompat/res/values/attrs.xml) theme attributes, e.g. `android:textColorPrimary` for dark theme should be light, and for light theme should be dark. By convention, here we suffix alternative theme colors with `Inverse`.
+
+<div class="bs-callout bs-callout-info">
+  <h4>Tip</h4>
+  Try out your alternative theme by temporary switching <code>android:theme</code> for <code>application</code> in <code>AndroidManifest.xml</code> to see what extra colors/style you need to create. For certain cases a color may look okay in both dark and light theme.
+</div>
 
 ### Theme-specific resources
 

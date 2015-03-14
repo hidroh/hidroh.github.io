@@ -60,10 +60,18 @@ Let's start with a light theme for our app:
 {% endhighlight %}
 
 Explanation for some theme attributes can be found on [Android Developers blog](http://android-developers.blogspot.sg/2014/10/appcompat-v21-material-design-for-pre.html).  
-*Tip: make a minimal app and try out the style attributes to see what attribute/value we need to set to achieve our desired theme first. As comprehensive as they are, Android documentations on theme attributes, especially with `appcompat`, are surprisingly lacking.*
+
+<div class="bs-callout bs-callout-info">
+  <h4>Tip</h4>
+  Make a minimal app and try out the style attributes to see what attribute/value we need to set to achieve our desired theme first. As comprehensive as they are, Android documentations on theme attributes, especially with <code>appcompat</code>, are surprisingly lacking.
+</div>
 
 Options menu icons should have the same color as action bar text color, in our case it's specified via [`android:textColorPrimary`](http://developer.android.com/training/material/theme.html#StatusBar), and is `#FFFFFF`, so we should provide a set of white options menu icons for the action bar.  
-*Tip: Google have made some of the material design icons public on [Github](https://github.com/google/material-design-icons).*
+
+<div class="bs-callout bs-callout-info">
+  <h4>Tip</h4>
+  Google have made some of the material design icons public on <a href="https://github.com/google/material-design-icons">Github</a>.
+</div>
 
 **menu/my_menu.xml**
 {% highlight xml %}

@@ -56,7 +56,10 @@ Scenario Outline: Verify item JSON schema
 
 And that's just the beginning! Check the [documentation](https://github.com/hidroh/cucumber-api) to see what else you can do with **cucumber-api**. Once you have written a solid set of API expectation with **cucumber-api**, put them in as part of your daily/nightly build process and never be caught off guard by unexpected API changes again!  
 
-*Note: Be careful with requests that may alter production data. Always think twice before you put them in, or make sure that any data alteration can be safely rolled back regardless of your test results.*
+<div class="bs-callout bs-callout-warning">
+  <h4>Note</h4>
+  Be careful with requests that may alter production data. Always think twice before you put them in, or make sure that any data alteration can be safely rolled back regardless of your test results.
+</div>
 
 If you find yourself restricted with any of the functionalities, don't be shy, go ahead and make a [pull request](https://github.com/hidroh/cucumber-api/pulls)!
 
