@@ -3,7 +3,7 @@ layout: default
 title: About Me
 ---
 
-## {{ page.title }}
+# {{ page.title }}
 
 ![Alt text](https://avatars1.githubusercontent.com/u/1978015?v=3&s=150){: style="float:right"}
 

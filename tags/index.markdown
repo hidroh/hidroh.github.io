@@ -2,7 +2,7 @@
 layout: default
 title: Tag Cloud
 ---
-## {{ page.title }}
+# {{ page.title }}
 
 <h3>
 {% for tag in site.tags %}

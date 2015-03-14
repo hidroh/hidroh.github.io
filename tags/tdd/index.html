@@ -13,13 +13,17 @@
   <meta name="twitter:description" content="" />
   <meta name="twitter:url" content="https://hidroh.github.io/tags/tdd/index.html" />
   <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Roboto+Slab:300,400' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="//secure.gravatar.com/avatar/927a4b12ae0d94c2c13f60fded2a98bf?s=16" />
+  <link href='//fonts.googleapis.com/css?family=Droid+Sans+Mono|Roboto+Slab:300,400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link href="/assets/css/style.css" rel="stylesheet" />
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -38,9 +42,15 @@
     <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a id="brand" class="navbar-brand" href="/">Ha Duy Trung</a>
         </div>
-        <div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="/about">About</a></li>
             <li><a href="/archives">Archives</a></li>
@@ -69,7 +79,7 @@
   </header>
 
   <div class="container">
-      <h2>Posts tagged &ldquo;tdd&rdquo;</h2>
+      <h1>Posts tagged &ldquo;tdd&rdquo;</h1>
 
 
 
@@ -130,7 +140,7 @@
 
 
 <h3>
-  <small>Jun 02, 2014</small><br />
+  <small><i class="fa fa-calendar"></i>&nbsp; Jun 02, 2014</small><br />
   <a href="/2014/06/02/using-context-android-testing/">Using context in Android testing</a>
 </h3>
 
@@ -163,17 +173,8 @@
 
   <div class="clearfix divider"></div>
   <footer>
-    <p class="text-center"><small>Copyright &copy; 2015 Ha Duy Trung. Powered by <a href="http://jekyllrb.com">Jekyll</a></small></p>
+    <p class="text-center"><small>Copyright &copy; 2015 Ha Duy Trung. Powered by <a href="https://jekyllrb.com">Jekyll</a></small></p>
   </footer>
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <script src="/assets/js/jquery.mobilemenu.min.js"></script>
-
-  <script>
-    $(document).ready(function(){
-      $('#sidebar nav ul').mobileMenu({'topOptionText': 'Menu', 'prependTo': '#sidebar nav'});
-    });
-  </script>
 
   <script type="text/javascript">
       var disqus_shortname = 'hidroh'; // required: replace example with your forum shortname
