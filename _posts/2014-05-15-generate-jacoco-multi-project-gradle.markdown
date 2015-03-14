@@ -2,6 +2,7 @@
 layout: post
 title:  "Generate Jacoco coverage for a multi-project Gradle setup"
 date:   2014-05-15 02:08:34
+summary: "Configuring Gradle build system to combine Jacoco and Android plugins for unit test coverage generation for multi-project setup"
 tags: android jacoco coverage robolectric gradle testing
 ---
 

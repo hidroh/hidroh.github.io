@@ -2,6 +2,7 @@
 layout: post
 title:  "Using context in Android testing"
 date:   2014-06-02 02:08:34
+summary: "Creating an interface for Android's Context to break direct dependency for unit testing"
 tags: android tdd context mock patterns testing
 ---
 
