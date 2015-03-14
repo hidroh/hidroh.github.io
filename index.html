@@ -1,6 +1,6 @@
 ---
 layout: default
-title: A lil' bit of programming that matters
+title: Ha Duy Trung | Blog
 summary: Tips and tricks, useful patterns and implementations for Android
 ---
 
@@ -8,43 +8,44 @@ summary: Tips and tricks, useful patterns and implementations for Android
 
     <article class="post">
 
-        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        <p class="meta">Posted on <span class="postdate">{{ post.date | date: "%b %d, %Y" }}</span>
-        <br />
-        <i class="fa fa-tags"></i>&nbsp;
-        {% for tag in post.tags %}
-        <a href="/tags/{{ tag }}">{{ tag }}</a>
-        {% endfor %}
-        </p>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h3><small>Posted on {{ post.date | date: "%b %d, %Y" }}
+      <br />
+      <i class="fa fa-tags"></i>&nbsp;
+      {% for tag in post.tags %}
+      <a href="/tags/{{ tag }}">{{ tag }}</a>
+      {% endfor %}
+      </small>
+      </h3>
 
-        <div class="post-content">{{ post.content }}</div>
+      <div class="post-content">{{ post.content }}</div>
 
     </article>
-
+    <div class="clearfix divider"></div>
 {% endfor %}
 
 
 
 {% if paginator.total_pages > 1 %}
-    <div class="postnavigation">
+    <nav>
+      <ul class="pager">
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+        <li class="previous"><a href="/">&larr; Newer</a></li>
+    {% else %}
+        <li class="previous"><a href="/page{{paginator.previous_page}}/">&larr; Newer</a></li>
+    {% endif %}
+  {% else %}
+        <li class="previous disabled"><a href="#">&larr; Newer</a></li>
+  {% endif %}
 
-        {% if paginator.previous_page %}
-            {% if paginator.page == 2 %}
-                <a class="prev left" href="/">&larr; Newer</a>
-            {% else %}
-                <a class="prev left" href="/page{{paginator.previous_page}}/">&larr; Newer</a>
-            {% endif %}
-        {% else %}
-            <span class="nope left">&larr; Newer</span>
-        {% endif %}
+        <li>Page {{ paginator.page }} of {{ paginator.total_pages }}</li>
 
-        <span class="pages">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-
-        {% if paginator.next_page %}
-            <a class="next right" href="/page{{paginator.next_page}}/">Older &rarr;</a>
-        {% else %}
-            <span class="nope right">Older &rarr;</span>
-        {% endif %}
-
-    </div>
+  {% if paginator.next_page %}
+        <li class="next"><a href="/page{{paginator.next_page}}/">Older &rarr;</a></li>
+  {% else %}
+        <li class="next disabled"><a href="#">Older &rarr;</a></li>
+  {% endif %}
+      </ul>
+    </nav>
 {% endif %}

@@ -8,9 +8,9 @@ tags: bdd cucumber api testing ruby gem rubygem
 
 If it is your first time hearing about [Cucumber](https://cukes.info/) or BDD in general, no sweat. In short, it allows you to specify your expectation in plain, readable text, meaning even your product managers can (almost) read and understand it!
 
-<img src="https://cukes.info/images/feature.png" width="300px" />
+<img src="https://cukes.info/images/feature.png" class="img-responsive center-block" />
 
-<img src="https://cukes.info/images/pending.png" width="300px" />
+<img src="https://cukes.info/images/pending.png" class="img-responsive center-block" />
 
 However, what I like about Cucumber is less for this reason, but more for how scalable and maintainable it could be when your test suites grow over time, with features such as [tagging and filtering](https://github.com/cucumber/cucumber/wiki/Tags), [hooks](https://github.com/cucumber/cucumber/wiki/Hooks), [reusing steps](https://github.com/cucumber/cucumber/wiki/Calling-Steps-from-Step-Definitions), etc... I'll let you [find that out](https://github.com/cucumber/cucumber/wiki) yourself, hopefully you will grow fond of writing your own BDD specs!
 
@@ -22,7 +22,7 @@ This means that regardless of your efforts to bullet-proof your app logic with a
 
 To address the above concerns, [cucumber-api](https://rubygems.org/gems/cucumber-api) extends [cucumber](https://github.com/cucumber/cucumber) to allow testing and verification of your API dependency in BDD style!
 
-[![Total Downloads](http://ruby-gem-downloads-badge.herokuapp.com/cucumber-api?type=total)](https://rubygems.org/gems/cucumber-api)
+<a href="https://rubygems.org/gems/cucumber-api"><img src="https://ruby-gem-downloads-badge.herokuapp.com/cucumber-api?type=total" class="center-block" /></a>
 
 By now you should have been inspired by the `Given-When-Then` pattern, let's try writing our API expectation in a similar fashion with **cucumber-api**:
 
