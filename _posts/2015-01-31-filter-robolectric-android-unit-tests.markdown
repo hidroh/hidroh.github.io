@@ -22,7 +22,7 @@ robolectric {
 Now when you run your Gradle test command, throw in a `-PtestFilter=<filter>` command line parameter to instruct Robolectric to run only the tests specified by your filter:
 
 {% highlight bash %}
-./gradlew test -PtestFilter=Activity
+$ ./gradlew test -PtestFilter=Activity
 {% endhighlight %}
 
 The above command will execute all tests with class name following `*Activity*Test` pattern. No parameter will default to running all tests. A drawback I found with this approach is that if your pattern has no matches, Robolectric executes all tests instead of no test (since there are none).
