@@ -6,7 +6,7 @@ summary: Tips and tricks, useful patterns and implementations for Android
 
 {% for post in paginator.posts %}
 
-    <article class="post">
+    <article>
 
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
       <h3>
@@ -20,7 +20,10 @@ summary: Tips and tricks, useful patterns and implementations for Android
         </small>
       </h3>
 
-      <div class="post-content">{{ post.content }}</div>
+      {{ post.content }}
+
+      <a href="{{ post.url }}#disqus_thread"><i class="fa fa-comments fa-2x"></i> Comments</a>
+      <div class="addthis_sharing_toolbox pull-right"></div>
 
     </article>
     <div class="clearfix divider"></div>
