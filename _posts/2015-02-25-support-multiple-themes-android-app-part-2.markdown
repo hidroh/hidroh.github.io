@@ -4,6 +4,7 @@ title:  "Supporting multiple themes in your Android app (Part 2)"
 date:   2015-02-25 3:40:34
 summary: "Constructing theme and style resources to create a multiple-theme Android app"
 tags: android resources theme styleable
+github: materialistic
 ---
 
 In the [first part]({% post_url 2015-02-16-support-multiple-themes-android-app %}) of this post, we have created a light theme and made initial preparation to support multiple themes. In this blog post, we will continue that effort, creating another theme and allowing dynamic switching of themes during runtime.

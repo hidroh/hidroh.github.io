@@ -4,6 +4,7 @@ title:  "Test your external API like a boss with Cucumber"
 date:   2015-03-08 2:40:34
 summary: "Introducing an extension to Cucumber that allows BDD-style testing of API"
 tags: bdd cucumber api testing ruby gem rubygem
+github: cucumber-api
 ---
 
 If it is your first time hearing about [Cucumber](https://cukes.info/) or BDD in general, no sweat. In short, it allows you to specify your expectation in plain, readable text, meaning even your product managers can (almost) read and understand it!
