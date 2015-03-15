@@ -8,4 +8,7 @@ permalink: /:year/:month/:day/:title/
 paginate: 2
 highlighter: pygments
 
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+gems:
+  - jekyll-sitemap
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'CNAME']
