@@ -11,5 +11,10 @@ A full-stack software engineer with more than 5 years experience, focused in mob
 
 I am kind of a control freak, and obsessed with testing. I love soccer and motosport. I am a die-hard [*Inter Milan*](http://www.inter.it/en/hp) and [*Valentino Rossi*](http://www.valentinorossi.com/en/) fan. I sometimes program for fun during my free time (I still go out to socialize of course!).
 
-Checkout my [Hacker News](https://news.ycombinator.com/) reader for Android:  
+Check out my open source projects:
+
+* Materialistic - [Hacker News](https://news.ycombinator.com/) reader for Android  
 [![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic)
+
+* cucumber-api - API testing in BBD-style  
+[![Total Downloads](http://ruby-gem-downloads-badge.herokuapp.com/cucumber-api?type=total)](https://rubygems.org/gems/cucumber-api)
