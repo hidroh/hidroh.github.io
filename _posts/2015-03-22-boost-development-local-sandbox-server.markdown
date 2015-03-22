@@ -4,6 +4,8 @@ title:  "Boost up development with a local sandbox server"
 date:   2015-03-22 4:40:34
 summary: "Quickly constructing a local sandbox server mirroring production web services for faster app development"
 tags: android ruby api sinatra testing sandbox
+image: /assets/img/chuck-norris-test-production.jpg
+github: hackernews-sandbox
 ---
 
 When we are doing unit testing, more often than not we will probably stumble upon external dependencies that we wish we could just get them out of the way to focus on the testing task at hand. That is when [mocking, stubbing, faking](http://martinfowler.com/articles/mocksArentStubs.html) comes in handy.

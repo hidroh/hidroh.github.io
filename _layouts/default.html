@@ -12,6 +12,9 @@
   <meta name="twitter:title" content="{{ page.title }}" />
   <meta name="twitter:description" content="{{ page.summary }}" />
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+{% if page.image %}
+  <meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />
+{% endif %}
   <!--[if lt IE 9]>
     <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->

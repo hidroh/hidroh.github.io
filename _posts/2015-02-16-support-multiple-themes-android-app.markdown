@@ -5,6 +5,7 @@ date:   2015-02-16 8:20:34
 summary: "Constructing theme and style resources to create a multiple-theme Android app"
 tags: android resources theme styleable
 github: materialistic
+image: /assets/img/themes.png
 ---
 
 <div class="row">
