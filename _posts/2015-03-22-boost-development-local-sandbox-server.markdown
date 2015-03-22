@@ -165,9 +165,9 @@ public class RestServiceFactory {
         void item(@Path("itemId") String itemId, Callback<Item> callback);
     }
 
-    public static RestService create(Context context, String baseUrl) {
+    public static RestService create(Context context) {
         return new RestAdapter.Builder()
-                .setEndpoint(context.getString(R.string.service_host) + baseUrl)
+                .setEndpoint(context.getString(R.string.service_host))
                 .setClient(new OkClient(new OkHttpClient()));
                 .build()
                 .create(RestService.class);
@@ -176,7 +176,7 @@ public class RestServiceFactory {
 
 ...
 
-RestServiceFactory.create(activity, "/v0/topstories.json");
+RestServiceFactory.create(activity);
 {% endhighlight %}
 
 <div class="bs-callout bs-callout-warning">
