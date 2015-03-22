@@ -159,9 +159,9 @@ import retrofit.client.OkClient;
 
 public class RestServiceFactory {
     interface RestService {
-        @GET("/topstories.json")
+        @GET("/v0/topstories.json")
         void topStories(Callback<int[]> callback);
-        @GET("/item/{itemId}.json")
+        @GET("/v0/item/{itemId}.json")
         void item(@Path("itemId") String itemId, Callback<Item> callback);
     }
 
