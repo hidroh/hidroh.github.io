@@ -37,7 +37,7 @@ As all slaves run on the same machine, it is recommended that different file sys
     <p>Slaves do not maintain important data (other than active workspaces of projects last built on it), so you can possibly set the slave workspace to a temporary directory. The only downside of doing this is that you may lose the up-to-date workspace if the slave is turned off.</p>
 </div>
 
-While separate FS roots and multi-processors allow concurrent Calabash executions, `ADB_DEVICE_ARG` environment variable is needed to instruct Calabash which device it should send ADB commands to, in case of multiple connected devices. Under the hood, Calabash automates UI via ADB commands. The value for this environment variable can be found via `adb devices` command. `ADB_DEVICE_ARG` should be set at node level via 'Environment variables' configuration, which will be then available at job level, as one device maps directly to one slave node.
+While separate FS roots and multi-processors allow concurrent Calabash executions, `ADB_DEVICE_ARG` environment variable is needed to instruct Calabash which device it should send ADB commands to, in case of multiple connected devices. Under the hood, Calabash automates UI via ADB commands. The value for this environment variable can be found via `adb devices` command. As one device maps directly to one slave node, `ADB_DEVICE_ARG` should be set at node level via 'Environment variables' configuration, which will be then available at job level.
 
 <div class="bs-callout bs-callout-primary">
     <h4>Environment variables</h4>
