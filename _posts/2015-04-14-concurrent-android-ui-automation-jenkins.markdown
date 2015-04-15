@@ -25,7 +25,7 @@ Jenkins slave is the first thing one needs to set up to prepare for [distributed
 
 By definition, a Jenkins slave is a computer that is set up to offload build tasks from the main computer that hosts Jenkins. In our case, the build task is automation test, while the 'computer' that runs it is a physical Android device. For this, all the slaves can be [running on the same machine](https://wiki.jenkins-ci.org/display/JENKINS/Distributed+builds#Distributedbuilds-RunningMultipleSlavesontheSameMachine) that have physical Android devices plugged in via USB cables, which allows ADB commands. The master Jenkins communicates with these Android agents via this machine.
 
-Below is our setup for a slave connecting to a Samsung S3.
+Below is our setup for a slave connecting to a **Samsung S3**.
 
 <img src="/assets/img/parallel-slave-1.png" class="img-responsive" />
 
@@ -65,7 +65,7 @@ With our Jenkins slaves and slave group in place, we can now set up a Jenkins jo
 
 <img src="/assets/img/parallel-downstream-1.png" class="img-responsive" />
 
-By checking both 'Execute concurrent builds if necessary' and 'Restrict where this project can be run', we instruct the job to be able to be run concurrently, subject to node availability, using only nodes tagged with 'android-group'. The restriction is to ensure that only nodes with connected devices are used for automation, as we may have other nodes with no connected devices used for other purposes.
+By checking both 'Execute concurrent builds if necessary' and 'Restrict where this project can be run', we allow the job to be executed concurrently, subject to node availability, using only nodes tagged with 'android-group'. The restriction is to ensure that only nodes with connected devices are used for automation, as we may have other nodes with no connected devices used for other purposes.
 
 <div class="bs-callout bs-callout-primary">
     <h4>Execute concurrent builds if necessary</h4>
