@@ -42,6 +42,14 @@ blogroll:
     title: "How to Leak a Context: Handlers & Inner Classes"
     url: http://www.androiddesignpatterns.com/2013/01/inner-class-handler-memory-leak.html
     host: androiddesignpatterns.com
+  -
+    title: "Android Application Launch (Part 2)"
+    url: http://multi-core-dump.blogspot.com/2010/04/android-application-launch-part-2.html
+    host: multi-core-dump.blogspot.com
+  -
+    title: "Android Application Launch"
+    url: http://multi-core-dump.blogspot.com/2010/04/android-application-launch.html
+    host: multi-core-dump.blogspot.com
 ---
 
 # {{ page.title }}
