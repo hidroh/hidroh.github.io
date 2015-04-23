@@ -1,7 +1,12 @@
 ---
 layout: default
 title: Blogroll
+summary: My blog bookmarks
 blogroll:
+  -
+    title: "Support Libraries v22.1.0"
+    url: https://chris.banes.me/2015/04/22/support-libraries-v22-1-0/
+    host: chris.banes.me
   -
     title: "Understand Android Activity's launchMode"
     url: http://inthecheesefactory.com/blog/understand-android-activity-launchmode/en
@@ -52,7 +57,7 @@ blogroll:
     host: multi-core-dump.blogspot.com
 ---
 
-# {{ page.title }}
+<h1>{{ page.title }}<br/><small>{{ page.summary }}</small></h1>
 
 {% for post in page.blogroll %}
 <h3>
