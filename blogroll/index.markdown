@@ -55,6 +55,14 @@ blogroll:
     title: "Android Application Launch"
     url: http://multi-core-dump.blogspot.com/2010/04/android-application-launch.html
     host: multi-core-dump.blogspot.com
+  -
+    title: "Java theory and practice: Managing volatility"
+    url: http://www.ibm.com/developerworks/library/j-jtp06197/
+    host: ibm.com
+  -
+    title: "Understanding Weak References"
+    url: https://weblogs.java.net/blog/2006/05/04/understanding-weak-references
+    host: weblogs.java.net
 ---
 
 <h1>{{ page.title }}<br/><small>{{ page.summary }}</small></h1>
