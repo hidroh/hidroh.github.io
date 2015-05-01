@@ -1,12 +1,16 @@
 ---
 layout: default
 title: Blogroll
-summary: My blog bookmarks
+summary: My blog and web bookmarks
 blogroll:
   -
     title: "Support Libraries v22.1.0"
     url: https://chris.banes.me/2015/04/22/support-libraries-v22-1-0/
     host: chris.banes.me
+  -
+    title: "Udacity - Android Performance"
+    url: https://www.udacity.com/course/ud825
+    host: udacity.com
   -
     title: "Understand Android Activity's launchMode"
     url: http://inthecheesefactory.com/blog/understand-android-activity-launchmode/en
