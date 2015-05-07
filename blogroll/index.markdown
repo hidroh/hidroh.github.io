@@ -8,6 +8,10 @@ blogroll:
     url: https://chris.banes.me/2015/04/22/support-libraries-v22-1-0/
     host: chris.banes.me
   -
+    title: "Android Performance Patterns"
+    url: https://www.youtube.com/playlist?list=PLWz5rJ2EKKc9CBxr3BVjPTPoDPLdPIFCE
+    host: youtube.com
+  -
     title: "Udacity - Android Performance"
     url: https://www.udacity.com/course/ud825
     host: udacity.com
