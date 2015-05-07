@@ -14,7 +14,7 @@ I am kind of a control freak, and obsessed with testing. I love soccer and motos
 Check out my open source projects:
 
 * Materialistic - [Hacker News](https://news.ycombinator.com/) reader for Android  
-[![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic)
+[![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic&referrer=utm_source%3Dhidroh.com)
 
 * cucumber-api - API testing in BBD-style  
 [![Total Downloads](http://ruby-gem-downloads-badge.herokuapp.com/cucumber-api?type=total)](https://rubygems.org/gems/cucumber-api)
