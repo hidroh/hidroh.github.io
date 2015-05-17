@@ -24,6 +24,10 @@ blogroll:
     url: http://techcrunch.com/2015/03/21/the-terrible-technical-interview/
     host: techcrunch.com
   -
+    title: "Dependency Injection with Dagger 2 (Devoxx 2014)"
+    url: https://speakerdeck.com/jakewharton/dependency-injection-with-dagger-2-devoxx-2014
+    host: speakerdeck.com
+  -
     title: "Fast Rendering News Feed on Android"
     url: https://code.facebook.com/posts/879498888759525/fast-rendering-news-feed-on-android/
     host: code.facebook.com
