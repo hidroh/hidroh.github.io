@@ -4,6 +4,10 @@ title: Blogroll
 summary: My blog and web bookmarks
 blogroll:
   -
+    title: "Developing for Android"
+    url: https://medium.com/google-developers/developing-for-android-introduction-5345b451567c
+    host: medium.com
+  -
     title: "Support Libraries v22.1.0"
     url: https://chris.banes.me/2015/04/22/support-libraries-v22-1-0/
     host: chris.banes.me
