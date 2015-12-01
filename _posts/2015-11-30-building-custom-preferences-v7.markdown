@@ -226,7 +226,7 @@ Of course don't forget to set the persisted preference value to our `Spinner` th
 **SpinnerPreference.java**
 {% highlight java %}
 public abstract class SpinnerPreference extends Preference {
-    private int mInitialSelection = 0;
+    private int mSelection = 0;
     ...
 
     @Override
@@ -240,7 +240,7 @@ public abstract class SpinnerPreference extends Preference {
         String value = restorePersistedValue ? getPersistedString(null) : (String) defaultValue;
         for (int i = 0; i < mEntryValues.length; i++) {
             if (TextUtils.equals(mEntryValues[i], value)) {
-                mInitialSelection = i;
+                mSelection = i;
                 break;
             }
         }
@@ -250,8 +250,16 @@ public abstract class SpinnerPreference extends Preference {
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
         final Spinner spinner = (Spinner) holder.findViewById(R.id.spinner);
-        spinner.setSelection(mInitialSelection);
+        spinner.setSelection(mSelection);
         ...
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mSelection = position;
+                ...
+            }
+            ...
+        });
     }
 }
 {% endhighlight %}
@@ -304,10 +312,10 @@ Now add this custom preference to our preferences config and we're good to go!
 
 Head over to [Materialistic's Github repo](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic) for complete implementation of this and other custom preferences:
 
-- abstract [`SpinnerPreference`](https://github.com/hidroh/materialistic/blob/33/app/src/main/java/io/github/hidroh/materialistic/preference/SpinnerPreference.java)
-- [`FontPreference`](https://github.com/hidroh/materialistic/blob/33/app/src/main/java/io/github/hidroh/materialistic/preference/FontPreference.java)
-- [`FontSizePreference`](https://github.com/hidroh/materialistic/blob/33/app/src/main/java/io/github/hidroh/materialistic/preference/FontSizePreference.java)
-- [`ThemePreference`](https://github.com/hidroh/materialistic/blob/33/app/src/main/java/io/github/hidroh/materialistic/preference/ThemePreference.java)
-- [`SettingsFragment`](https://github.com/hidroh/materialistic/blob/33/app/src/main/java/io/github/hidroh/materialistic/SettingsFragment.java)
-- [`xml/preferences.xml`](https://github.com/hidroh/materialistic/blob/33/app/src/main/res/xml/preferences.xml)
-- [`values/styles.xml`](https://github.com/hidroh/materialistic/blob/33/app/src/main/res/values/styles.xml#L22)
+- abstract [`SpinnerPreference`](https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/preference/SpinnerPreference.java)
+- [`FontPreference`](https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/preference/FontPreference.java)
+- [`FontSizePreference`](https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/preference/FontSizePreference.java)
+- [`ThemePreference`](https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/preference/ThemePreference.java)
+- [`SettingsFragment`](https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/SettingsFragment.java)
+- [`xml/preferences.xml`](https://github.com/hidroh/materialistic/blob/34/app/src/main/res/xml/preferences.xml)
+- [`values/styles.xml`](https://github.com/hidroh/materialistic/blob/34/app/src/main/res/values/styles.xml#L22)
