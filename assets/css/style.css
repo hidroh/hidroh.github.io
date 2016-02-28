@@ -3,6 +3,7 @@ body {
     font-family: 'Roboto Slab';
     font-size: 18px;
 }
+iframe {width: 50.625vh; height: 90vh;} /* 9:16 */
 .divider {
     margin-top: 20px;
     margin-bottom: 10px;
