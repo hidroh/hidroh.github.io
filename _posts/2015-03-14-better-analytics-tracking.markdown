@@ -8,6 +8,9 @@ tags: google-analytics google-tagmanager android patterns
 
 [Google Analytics](https://www.google.com/analytics/) is great. I love it! People at my company love it! It tells you so many things about how your audience uses your app. But once your feet are deep into the analytics game, your application will probably end up with a bunch of clunky analytics tracking code as below:
 
+<a href="#codeV1" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeV1">
 {% highlight java %}
 GoogleAnalytics.getInstance(context).send(new HitBuilders.EventBuilder()
         .setCategory("story")
@@ -20,6 +23,7 @@ GoogleAnalytics.getInstance(context).send(new HitBuilders.EventBuilder()
         .setLabel("1")
         .build());
 {% endhighlight %}
+</div>
 
 Don't get me wrong, the [Google Analytics API](https://developers.google.com/analytics/devguides/collection/android/v4/) is in no way bad, but the direct application of 'analytics tracking' may backfire you in the future, let's say when you switch to another provider, or when you simply want to change the name of a category/action. This calls for a layer of abstraction to future proof your tracking methods.
 
@@ -62,12 +66,16 @@ In simple words, a *tag* connects to your analytics service, whenever *rule*s th
 
 With this setup, an equivalent logic to the original Google Analytics example is as follows:
 
+<a href="#codeV2" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeV2">
 {% highlight java %}
 TagManager.getInstance(context).getDataLayer().pushEvent("view",
         DataLayer.mapOf("object_type", "story", "object_id", "1"));
 TagManager.getInstance(context).getDataLayer().pushEvent("share",
         DataLayer.mapOf("object_type", "story", "object_id", "1"));
 {% endhighlight %}
+</div>
 
 <div class="bs-callout bs-callout-info">
   <h4>Tip</h4>
@@ -84,8 +92,11 @@ We don't push an event to the tracking service anymore. We push our data model a
 
 If we generalize our data model and its interaction definition, treating anything that can be interacted with as a `Trackable` object, then we can just simply dump any interaction with a `Trackable` to Google Tag Manager, or an in-house data sink, delaying the decision of what to track for another day, and move forward with the project, without having to worry about fixing the code later to change tracking logic.
 
-**Trackable.java**
-{% highlight java linenos %}
+<a href="#codeV3" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeV3">
+Trackable.java
+{% highlight java %}
 public interface Trackable {
     enum ObjectType { story, comment, ... }
     String getTrackedObjectId();
@@ -93,8 +104,8 @@ public interface Trackable {
 }
 {% endhighlight %}
 
-**Analytics.java**
-{% highlight java linenos %}
+Analytics.java
+{% highlight java %}
 public final class Analytics {
     public enum Event { view, share, ... }
 
@@ -137,9 +148,13 @@ public final class Analytics {
     }
 }
 {% endhighlight %}
+</div>
 
 Using the above `Trackable` interface and the fluent-API `Analytic.Builder` class, one can dump interaction data to Google Tag Manager as follows:
 
+<a href="#codeV4" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeV4">
 {% highlight java %}
 Analytics.Builder.createInstance(new Trackable() {
             @Override
@@ -156,6 +171,7 @@ Analytics.Builder.createInstance(new Trackable() {
         .add(Analytics.Event.share)
         .send(context);
 {% endhighlight %}
+</div>
 
 Of course, generalizing things and introducing abstraction layers will make things less flexible for some special cases. But in general, I always find that with some smart combinations of Google Tag Manager's *tag* and *rule*, the same can be achieved without losing the generality. And even better: the real tracking logic is now essentially broken free from our app!
 

@@ -33,6 +33,9 @@ For example, [Materialistic](https://github.com/hidroh/materialistic) uses a few
 
 I like Ruby, it makes rapid prototyping easy; and [sinatra](https://github.com/sinatra/sinatra) seems to be the perfect pick to quickly construct a dumb sandbox server. But any web frameworks in any languages should be capable of doing the same thing here.
 
+<a href="#codeV1" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeV1">
 {% highlight ruby %}
 require 'sinatra'
 
@@ -48,11 +51,15 @@ get '/v0/item/:id.json' do |id|
   %/{ "by": "hidro", "id": #{id}, "title": "Hello World", "type": "story" }%/
 end
 {% endhighlight %}
+</div>
 
 Done and dusted! Now every GET request to `/v0/topstories.json` will give us 3 story IDs, and every `/v0/item/<id>.json` will give us the same 'Hello World' story.
 
 Let's make it a little bit smarter in the next prototyping iteration.
 
+<a href="#codeV2" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeV2">
 {% highlight ruby %}
 require 'sinatra'
 
@@ -77,6 +84,7 @@ def mock_response json='default'
   File.open(file_path)
 end
 {% endhighlight %}
+</div>
 
 Now whenever the sandbox server receives a request, it will return a JSON response as saved under the `/responses/` folder:
 
@@ -96,6 +104,9 @@ or /responses/v0/item/default.json
 
 What if we want to simulate different scenarios, e.g. when the server encounters high traffic load and fails to return proper response?
 
+<a href="#codeV3" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeV3">
 {% highlight ruby %}
 require 'sinatra'
 
@@ -116,6 +127,8 @@ def mock_response json='default'
 end
 
 {% endhighlight %}
+</div>
+
 Now when we want to test scenario 'empty', send a request to `/_sandbox/empty`, the subsequent requests will look for response under 'empty' dataset:
 
 {% highlight bash %}
@@ -139,7 +152,10 @@ This can keep going until we have a sandbox server that balances our needs and i
 ###Switching to local sandbox server
 With our sandbox server ready to be used for development and testing, we need to find a way to build our app against different servers: a sandboxed one for `debug` build, and a real one for `release` build. Here [http://localhost:4567](#) is the default sinatra host.
 
-**build.gradle**
+<a href="#codeAndroid" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeAndroid">
+build.gradle
 {% highlight groovy %}
 apply plugin: 'com.android.application'
 
@@ -164,7 +180,7 @@ android {
 ...
 {% endhighlight %}
 
-**RestServiceFactory.java**
+RestServiceFactory.java
 {% highlight java %}
 import com.squareup.okhttp.OkHttpClient;
 import retrofit.Callback;
@@ -192,6 +208,7 @@ public class RestServiceFactory {
 
 RestServiceFactory.create(activity);
 {% endhighlight %}
+</div>
 
 <div class="bs-callout bs-callout-warning">
     <h4>Note</h4>

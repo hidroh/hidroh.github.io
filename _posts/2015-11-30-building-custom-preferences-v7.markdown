@@ -67,7 +67,11 @@ So here goes! Let's call our custom preference `SpinnerPreference`, since a [Spi
 
 Our custom widget layout can be as simple as a single `AppCompatSpinner`. We set this layout as our preference's widget layout, which leaves the default title and summary for base class implementation.
 
-**layout/preference_spinner.xml**
+<a href="#codeSpinnerPreferenceV1" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeSpinnerPreferenceV1">
+
+layout/preference_spinner.xml
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.AppCompatSpinner
@@ -77,7 +81,7 @@ Our custom widget layout can be as simple as a single `AppCompatSpinner`. We set
     android:layout_height="wrap_content" />
 {% endhighlight %}
 
-**SpinnerPreference.java**
+SpinnerPreference.java
 {% highlight java %}
 public abstract class SpinnerPreference extends Preference {
     public SpinnerPreference(Context context, AttributeSet attrs) {
@@ -92,10 +96,14 @@ public abstract class SpinnerPreference extends Preference {
     ...
 }
 {% endhighlight %}
+</div>
 
 The default implementation should take care of inflating our custom widget layout, creating a `PreferenceViewHolder`, leaving us the task of binding it. Here we wire up the preference click logic to open `Spinner`'s dropdown, and give it a set of items, which can be passed through [custom attributes](http://developer.android.com/training/custom-views/create-view.html#customattr) `app:entries` and `app:entryValues`, similar to `android:entries` and `android:entryValues` of [`ListPreference`](https://developer.android.com/reference/android/support/v7/preference/ListPreference.html#lattrs). Clicking a spinner dropdown item will persist its corresponding value as string here, but it can be any of the supported types.
 
-**values/attrs.xml**
+<a href="#codeSpinnerPreferenceV2" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeSpinnerPreferenceV2">
+values/attrs.xml
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
@@ -107,7 +115,7 @@ The default implementation should take care of inflating our custom widget layou
 </resources>
 {% endhighlight %}
 
-**SpinnerPreference.java**
+SpinnerPreference.java
 {% highlight java %}
 public abstract class SpinnerPreference extends Preference {
     protected String[] mEntries = new String[0];
@@ -178,10 +186,14 @@ public abstract class SpinnerPreference extends Preference {
     protected abstract void bindDropDownView(int position, View view);
 }
 {% endhighlight %}
+</div>
 
 Subclasses to this abstract `SpinnerPreference` should provide implementation to create and bind each dropdown item, which is where we do our magic to spice up the instant preview. Below is an example where each dropdown item has its own typeface, retrieved via a `FontCache`, which is a map of name and typeface.
 
-**FontPreference.java**
+<a href="#codeFontPreference" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeFontPreference">
+FontPreference.java
 {% highlight java %}
 public class FontPreference extends SpinnerPreference {
     private final LayoutInflater mLayoutInflater;
@@ -209,7 +221,7 @@ public class FontPreference extends SpinnerPreference {
 }
 {% endhighlight %}
 
-**layout/spinner_dropdown_item.xml**
+layout/spinner_dropdown_item.xml
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -220,10 +232,14 @@ public class FontPreference extends SpinnerPreference {
     android:layout_height="?attr/dropdownListPreferredItemHeight"
     android:ellipsize="marquee"/>
 {% endhighlight %}
+</div>
 
 Of course don't forget to set the persisted preference value to our `Spinner` the next time users visit settings:
 
-**SpinnerPreference.java**
+<a href="#codeSpinnerPreferenceV3" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeSpinnerPreferenceV3">
+SpinnerPreference.java
 {% highlight java %}
 public abstract class SpinnerPreference extends Preference {
     private int mSelection = 0;
@@ -263,10 +279,14 @@ public abstract class SpinnerPreference extends Preference {
     }
 }
 {% endhighlight %}
+</div>
 
 Now add this custom preference to our preferences config and we're good to go!
 
-**xml/preferences.xml**
+<a href="#codeXml" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeXml">
+xml/preferences.xml
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.preference.PreferenceScreen
@@ -284,7 +304,7 @@ Now add this custom preference to our preferences config and we're good to go!
 </android.support.v7.preference.PreferenceScreen>
 {% endhighlight %}
 
-**values/arrays.xml**
+values/arrays.xml
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
@@ -305,6 +325,7 @@ Now add this custom preference to our preferences config and we're good to go!
     ...
 </resources>
 {% endhighlight %}
+</div>
 
 <img src="/assets/img/settings-font.png" class="img-responsive center-block" />
 

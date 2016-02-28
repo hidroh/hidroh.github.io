@@ -29,6 +29,9 @@ First let's quickly get through the basics. By the way they are named, it is qui
 
 When it comes to rich text however, `TextView` shows certain limitations that we may want to weigh up before considering using it: it only handles a [limited set of HTML tags](https://commonsware.com/blog/Android/2010/05/26/html-tags-supported-by-textview.html), which should be sufficient in most cases; and we have to handle fetching embedded remote images by ourselves, via an [`ImageGetter`](https://developer.android.com/intl/es/reference/android/text/Html.ImageGetter.html) instance; and intercept hyperlinks by using [`LinkMovementMethod`](https://developer.android.com/reference/android/text/method/LinkMovementMethod.html). Whew!
 
+<a href="#codeTextView" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeTextView">
 {% highlight java %}
 textView.setMovementMethod(new LinkMovementMethod());
 textView.setText(Html.fromHtml("<p>Hello World!</p>",
@@ -80,11 +83,16 @@ class URLDrawable extends BitmapDrawable {
     }
 }
 {% endhighlight %}
+</div>
 
 **WebView**
 
 Meant for HTML display, `WebView` supports most HTML tags out of the box. We already know how to use a `WebView` to load a remote webpage with `WebView.loadUrl()`, but it can also load a local webpage as well: by wrapping HTML string inside a `<body>` block and loading it via `WebView.loadDataWithBaseURL()`, where base URL is `null`. `WebView` supports zooming (need to enable), and handles images and hyperlinks by default (of course!).
 
+
+<a href="#codeWebViewSimple" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeWebViewSimple">
 {% highlight java %}
 webView.getSettings().setBuiltInZoomControls(true); // optional
 webView.loadDataWithBaseURL(null,
@@ -108,6 +116,7 @@ private String wrapHtml(Context context, String html) {
     </string>
 </resources>
 {% endhighlight %}
+</div>
 
 ### Styling
 
@@ -123,6 +132,10 @@ Now let's try to style `TextView` and `WebView` to render the example article on
 <center><i>Styling: TextView (left) vs WebView (right) (click for full size)</i></center>
 
 While `TextView` provides many attributes and APIs out of the box for styling, `WebView` does not provide public APIs for styling its HTML content. However with some basic CSS knowledge, one can instrument given HTML with CSS styles and achieve desired styling as above. We need to be careful on the conversion from CSS metrics to Android metrics though.
+
+<a href="#codeWebViewFull" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+
+<div class="collapse" id="codeWebViewFull">
 
 {% highlight java %}
 webView.loadDataWithBaseURL(null,
@@ -188,6 +201,7 @@ private int getIdRes(Context context, @AttrRes int attrRes) {
     </string>
 </resources>
 {% endhighlight %}
+</div>
 
 ### Performance
 
