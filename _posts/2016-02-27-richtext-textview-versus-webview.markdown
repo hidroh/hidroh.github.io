@@ -5,7 +5,7 @@ date:   2016-02-27 14:53:34
 summary: "An analysis of using TextView versus WebView to display HTML content"
 tags: android view textview webview performance html memory gpu cpu
 github: richtext
-image: /assets/img/textview-webview.gif
+image: /assets/img/rendering_webview.png
 ---
 
 So, say we have a piece of rich text, most probably in the form of HTML (e.g. a simplified HTML made for mobile reading), what kind of widget is best used to display it? How do we achieve the flexible yet rich reading experience from popular mobile readers like Readability, Pocket, or [Materialistic](https://github.com/hidroh/materialistic) (!)?
