@@ -124,12 +124,14 @@ Now let's try to style `TextView` and `WebView` to render the example article on
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-6"><a href="/assets/img/rendering_textview.png"><img src="/assets/img/rendering_textview.png" class="img-responsive" /></a></div>
-        <div class="col-sm-6"><a href="/assets/img/rendering_webview.png"><img src="/assets/img/rendering_webview.png" class="img-responsive" /></a></div>
-	</div>
+        <div class="center-block" style="max-width:75%">
+            <img src="/assets/img/rendering_textview.png" style="max-width:45%" />
+            <img src="/assets/img/rendering_webview.png" style="max-width:45%" />
+        </div>
+    </div>
 </div>
 
-<center><i>Styling: TextView (left) vs WebView (right) (click for full size)</i></center>
+<center><i>Styling: TextView (left) vs WebView (right)</i></center>
 
 While `TextView` provides many attributes and APIs out of the box for styling, `WebView` does not provide public APIs for styling its HTML content. However with some basic CSS knowledge, one can instrument given HTML with CSS styles and achieve desired styling as above. We need to be careful on the conversion from CSS metrics to Android metrics though.
 
@@ -209,9 +211,11 @@ Using the above techniques to style `TextView` and `WebView` to display the samp
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-6"><a href="/assets/img/performance_textview.png"><img src="/assets/img/performance_textview.png" class="img-responsive" /></a></div>
-        <div class="col-sm-6"><a href="/assets/img/performance_webview.png"><img src="/assets/img/performance_webview.png" class="img-responsive center-block" /></a></div>
-	</div>
+        <div class="center-block" style="max-width:90%">
+            <a href="/assets/img/performance_textview.png"><img src="/assets/img/performance_textview.png" style="max-width:45%" /></a>
+            <a href="/assets/img/performance_webview.png"><img src="/assets/img/performance_webview.png" style="max-width:45%" /></a>
+        </div>
+    </div>
 </div>
 
 <center><i>Performance: TextView (left) vs WebView (right) (click for full size)</i></center>
