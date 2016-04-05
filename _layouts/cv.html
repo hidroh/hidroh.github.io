@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ page.title }}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.summary }}" />
+  <meta name="author" content="{{ site.author }}" />
+  <meta name="keywords" content="{{ site.keywords }}" />
+  <meta name="theme-color" content="#222">
+  <!--[if lt IE 9]>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="shortcut icon" href="//secure.gravatar.com/avatar/927a4b12ae0d94c2c13f60fded2a98bf?s=16" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link href="/assets/css/cv.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WLBXB3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WLBXB3');</script>
+  <!-- End Google Tag Manager -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-md-offset-2">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

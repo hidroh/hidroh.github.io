@@ -1,0 +1,59 @@
+body {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-family: 'Georgia';
+    font-size: 14px;
+}
+h1,h2 {
+    text-transform: uppercase;;
+}
+h1 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+h2 {
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-top: 1px solid #9E9E9E;
+    border-bottom: 1px solid #9E9E9E;
+    color: #9E9E9E;
+}
+hr {
+    margin-left: 32px;
+    margin-right: 32px;
+}
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+.section-left {
+    font-weight: bold;
+}
+.section-right {
+    text-align: right;
+}
+@media print {
+    body {
+        line-height: 150% !important;
+    }
+    a[href] {
+        text-decoration: underline;
+        color: #9E9E9E !important;
+    }
+    a[href]:after {
+        content: none !important;
+    }
+    h2 {
+        border-top: 1px solid #9E9E9E !important;
+        border-bottom: 1px solid #9E9E9E !important;
+        color: #9E9E9E !important;
+    }
+}
+@page {
+    margin-top: 2.54cm;
+    margin-bottom: 2.54cm;
+    margin-left: 2.54cm;
+    margin-right: 2.54cm;
+}
