@@ -106,16 +106,22 @@
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=hadt" async="async"></script>
 
   <script type="text/javascript">
-      var disqus_shortname = 'hidroh'; // required: replace example with your forum shortname
+    var disqus_shortname = 'hidroh'; // required: replace example with your forum shortname
 
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function () {
-          var s = document.createElement('script'); s.async = true;
-          s.type = 'text/javascript';
-          s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
-    </script>
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+  </script>
+  <script type="text/javascript">
+    $("header").click(function() {
+      $("html,body").animate({ scrollTop: 0 }, "fast");
+      return true;
+    });
+  </script>
 
 </body>
 </html>
