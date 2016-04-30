@@ -13,6 +13,8 @@ It is common for apps from the same vendor serving multiple markets to share the
 
 This blog post introduces an approach to drastically reduce automation time in such cases, by concurrently executing UI automation for different product variants via a Continuous Integration (CI) server. We choose to run UI automation tests on actual devices rather than emulators for several reasons:
 
+<!--more-->
+
 * More realistic automation: There are things that we can only spot on real devices
 * Light memory and CPU consumption on host machine: An emulator usually consumes a large chunk of computer resources, while a USB-connected device consumes almost nothing
 * It's cheap! Android devices are cheap. You can easily add a used device to the device cluster, while the number of emulators are bound by computer resources, and they are expensive

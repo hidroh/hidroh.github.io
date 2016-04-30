@@ -5,8 +5,9 @@ author: Ha Duy Trung
 keywords: Android, Technical blog, Java, hidroh, Materialistic, Ha Duy Trung
 
 permalink: /:year/:month/:day/:title/
-paginate: 2
+paginate: 5
 highlighter: rouge
+excerpt_separator: <!--more-->
 
 gems:
   - jekyll-sitemap

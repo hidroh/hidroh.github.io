@@ -15,6 +15,8 @@ image: /assets/img/themes.png
 
 Recently, I have been working on my news reader app for Hacker News, [Materialistic](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic). As in any news reader apps, one of the most popular user feature request is ability to choose between light/dark theme for reading preference. Fortunately, supporting multiple themes in Android is quite easy and natural (given that you started properly). This blog explains the approach used by [Materialistic](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic) to support multiple themes.
 
+<!--more-->
+
 What you need:
 
 - At least 2 app themes that extend from base light/dark Android themes. If you use latest [appcompat-v7](http://developer.android.com/tools/support-library/features.html#v7-appcompat) it would be `Theme.AppCompat.Light` or `Theme.AppCompat.Light.DarkActionBar` (light version) and `Theme.AppCompat` (dark version).

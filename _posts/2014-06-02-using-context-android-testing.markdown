@@ -10,6 +10,8 @@ If you are keen on doing TDD with Android, you may have stumbled upon the dreade
 
 Soon you learn that it is not straightforward to get the default Android’s [`Context`](http://developer.android.com/reference/android/content/Context.html) out of the way, even with [`MockContext`](http://developer.android.com/reference/android/test/mock/MockContext.html). That is one of the reasons why we see test frameworks such as [Robolectric](http://robolectric.org/) (or mock framework such as [Mockito](https://code.google.com/p/mockito/), [PowerMock](https://code.google.com/p/powermock/)) getting popular. While it is convenient to let Robolectric build an activity for you and use it as the context, or mock up your own context using Mockito, there is a more structured way of making Context work for you in testing.
 
+<!--more-->
+
 The reason why you can’t get `Context` out of your way in the first place is because it is a class, and you need to construct a specific instance to use it in testing, and it is just impossible to construct a real one! But what if it’s an interface? Then you can pass the interface around, and have a mock implementation of that interface to be used in testing instead of the real one?
 
 With that in mind, we come up with the solution of having a `ContextWrapper`, which serves exact same purpose as Android’s `Context`, delegating all tasks to Android’s `Context`, and implements an interface, says `IContext`, that we will pass around instead of Android’s `Context` object. This `IContext` at a glance will look very much like what Android’s `Context` offers, and you can add in more as you go along with your project.

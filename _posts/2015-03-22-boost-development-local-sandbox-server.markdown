@@ -17,6 +17,8 @@ If we apply these techniques in a broader context, says for app testing, where o
     <h4>Wikipedia</h4>
 </div>
 
+<!--more-->
+
 Now, when we talk about *sandbox* here, I mean *our own, self-developed, local sandbox server*, not an external sandbox server as provided by our service provider (e.g. [Paypal](https://www.sandbox.paypal.com/), [eBay](http://sandbox.ebay.com/), [Google](https://developers.google.com/wallet/instant-buy/test-flows) sandbox environment). Why? Because if we use an external sandbox server, it is still an external server, populated with test data from other users. We are often forced to use one so that we do not polute the service provider's production data, at the cost of real network latency (if not worse).
 
 <img src="/assets/img/chuck-norris-test-production.jpg" class="img-responsive center-block" />

@@ -8,6 +8,8 @@ tags: android gradle google-analytics
 
 [Gradle plugin for Android](http://tools.android.com/tech-docs/new-build-system) is the official build tool for Android, and is getting better everyday with new features allowing you to customize your build process more and more. One of its feature is allowing one to inject resources that can have different values per build type/product flavor. We can utilize it to separate analytics data for development and production.
 
+<!--more-->
+
 In your `build.gradle`:
 
 {% highlight groovy %}

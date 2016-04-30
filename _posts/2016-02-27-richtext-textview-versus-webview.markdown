@@ -16,6 +16,8 @@ For the sake of comparison, let's assume that we are given the task of displayin
 
 <a href="/assets/img/textview-webview-sample.png"><img src="/assets/img/textview-webview-sample.png" class="img-responsive center-block" style="max-height:320px" /></a>
 
+<!--more-->
+
 ### The basics
 
 First let's quickly get through the basics. By the way they are named, it is quite obvious that `TextView` is meant for text rendering, while `WebView` is for webpage rendering. With proper use of their APIs however, we can quickly turn both of them into flexible widgets that can render rich text with images.

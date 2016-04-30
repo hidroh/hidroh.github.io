@@ -17,11 +17,13 @@ Android SDK comes with 2 choices for developers who want to implement a settings
 - [`PreferenceActivity`](https://developer.android.com/reference/android/preference/PreferenceActivity.html) may break our inheritance chain, and sorry but no [toolbar](http://www.google.com/design/spec/components/toolbars.html)
 - [`PreferenceFragment`](https://developer.android.com/reference/android/preference/PreferenceFragment.html) is only available from API 11
 
-Many just give up on this and either go for a bare-bone settings screen with horrible experience, or go the long way of having their own implementation.
+Many just give up on this and either go for a bare-bone settings screen with horrible experience, or go the long way of having their own implementation. Here comes [preference-v7](https://developer.android.com/tools/support-library/features.html#v7-preference) to the rescue!
+
+<!--more-->
 
 ### preference-v7
 
-Fortunately, with the release of [preference-v7](https://developer.android.com/tools/support-library/features.html#v7-preference), these have been adressed and there should be no excuses now for not implementing a good settings screen. As with other components of support library, preference-v7 provides the same set of implementation as Android SDK, with backward compatibility all the way back to API 7! This means that we get these components for free out of the box:
+With the release of preference-v7, these have been adressed and there should be no excuses now for not implementing a good settings screen. As with other components of support library, preference-v7 provides the same set of implementation as Android SDK, with backward compatibility all the way back to API 7! This means that we get these components for free out of the box:
 
 - [`CheckBoxPreference`](https://developer.android.com/reference/android/support/v7/preference/CheckBoxPreference.html)
 - [`DialogPreference`](https://developer.android.com/reference/android/support/v7/preference/DialogPreference.html)
