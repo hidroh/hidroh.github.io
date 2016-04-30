@@ -84,8 +84,8 @@ blogroll:
 <h1>{{ page.title }}<br/><small>{{ page.summary }}</small></h1>
 
 {% for post in page.blogroll %}
-<h3>
-  <a href="{{ post.url }}" target="_blank">{{ post.title }}</a><br />
+<h4>
+  <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
   <small>{{ post.host }}</small>
-</h3>
+</h4>
 {% endfor %}
