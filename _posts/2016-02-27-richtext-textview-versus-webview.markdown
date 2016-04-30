@@ -14,7 +14,7 @@ In this article, we will explore two very popular and powerful widgets that has 
 
 For the sake of comparison, let's assume that we are given the task of displaying [the following image-intensive article](http://www.propertyguru.com.sg/property-management-news/2015/11/111633/7-small-spaces-to-call-home), styled to specific background color, text size and color. We will first try to use available APIs in `TextView` and `WebView` to render the given HTML in the same, comparable way, then analyze their performance: memory, GPU and CPU consumption. Example code can be found [here](https://github.com/hidroh/richtext).
 
-<a href="/assets/img/textview-webview-sample.png"><img src="/assets/img/textview-webview-sample.png" class="img-responsive center-block" style="max-height:320px" /></a>
+<a href="/assets/img/textview-webview-sample.png"><img src="/assets/img/textview-webview-sample.png" class="img-responsive center-block img-thumbnail" style="max-height:320px" /></a>
 
 <!--more-->[ ](#){: id="more"}
 
@@ -31,7 +31,7 @@ First let's quickly get through the basics. By the way they are named, it is qui
 
 When it comes to rich text however, `TextView` shows certain limitations that we may want to weigh up before considering using it: it only handles a [limited set of HTML tags](https://commonsware.com/blog/Android/2010/05/26/html-tags-supported-by-textview.html), which should be sufficient in most cases; and we have to handle fetching embedded remote images by ourselves, via an [`ImageGetter`](https://developer.android.com/intl/es/reference/android/text/Html.ImageGetter.html) instance; and intercept hyperlinks by using [`LinkMovementMethod`](https://developer.android.com/reference/android/text/method/LinkMovementMethod.html). Whew!
 
-<a href="#codeTextView" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeTextView" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeTextView">
 {% highlight java %}
@@ -92,7 +92,7 @@ class URLDrawable extends BitmapDrawable {
 Meant for HTML display, `WebView` supports most HTML tags out of the box. We already know how to use a `WebView` to load a remote webpage with `WebView.loadUrl()`, but it can also load a local webpage as well: by wrapping HTML string inside a `<body>` block and loading it via `WebView.loadDataWithBaseURL()`, where base URL is `null`. `WebView` supports zooming (need to enable), and handles images and hyperlinks by default (of course!).
 
 
-<a href="#codeWebViewSimple" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeWebViewSimple" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeWebViewSimple">
 {% highlight java %}
@@ -133,11 +133,11 @@ Now let's try to style `TextView` and `WebView` to render the example article on
     </div>
 </div>
 
-<center><i>Styling: TextView (left) vs WebView (right)</i></center>
+<figcaption>Styling: TextView (left) vs WebView (right)</figcaption>
 
 While `TextView` provides many attributes and APIs out of the box for styling, `WebView` does not provide public APIs for styling its HTML content. However with some basic CSS knowledge, one can instrument given HTML with CSS styles and achieve desired styling as above. We need to be careful on the conversion from CSS metrics to Android metrics though.
 
-<a href="#codeWebViewFull" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeWebViewFull" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeWebViewFull">
 
@@ -220,7 +220,7 @@ Using the above techniques to style `TextView` and `WebView` to display the samp
     </div>
 </div>
 
-<center><i>Performance: TextView (left) vs WebView (right) (click for full size)</i></center>
+<figcaption>Performance: TextView (left) vs WebView (right) (click for full size)</figcaption>
 
 As seen from the performance monitor screenshots, `TextView` consumes significantly more memory than `WebView`, as it needs to hold bitmaps from all loaded images once they are fetched, regardless of whether they are visible on screen.
 

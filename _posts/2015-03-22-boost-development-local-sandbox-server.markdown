@@ -35,7 +35,7 @@ For example, [Materialistic](https://github.com/hidroh/materialistic) uses a few
 
 I like Ruby, it makes rapid prototyping easy; and [sinatra](https://github.com/sinatra/sinatra) seems to be the perfect pick to quickly construct a dumb sandbox server. But any web frameworks in any languages should be capable of doing the same thing here.
 
-<a href="#codeV1" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeV1" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeV1">
 {% highlight ruby %}
@@ -59,7 +59,7 @@ Done and dusted! Now every GET request to `/v0/topstories.json` will give us 3 s
 
 Let's make it a little bit smarter in the next prototyping iteration.
 
-<a href="#codeV2" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeV2" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeV2">
 {% highlight ruby %}
@@ -106,7 +106,7 @@ or /responses/v0/item/default.json
 
 What if we want to simulate different scenarios, e.g. when the server encounters high traffic load and fails to return proper response?
 
-<a href="#codeV3" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeV3" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeV3">
 {% highlight ruby %}
@@ -154,7 +154,7 @@ This can keep going until we have a sandbox server that balances our needs and i
 ###Switching to local sandbox server
 With our sandbox server ready to be used for development and testing, we need to find a way to build our app against different servers: a sandboxed one for `debug` build, and a real one for `release` build. Here [http://localhost:4567](#) is the default sinatra host.
 
-<a href="#codeAndroid" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeAndroid" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeAndroid">
 build.gradle

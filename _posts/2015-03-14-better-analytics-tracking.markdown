@@ -8,7 +8,7 @@ tags: google-analytics google-tagmanager android patterns
 
 [Google Analytics](https://www.google.com/analytics/) is great. I love it! People at my company love it! It tells you so many things about how your audience uses your app. But once your feet are deep into the analytics game, your application will probably end up with a bunch of clunky analytics tracking code as below:
 
-<a href="#codeV1" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeV1" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeV1">
 {% highlight java %}
@@ -68,7 +68,7 @@ In simple words, a *tag* connects to your analytics service, whenever *rule*s th
 
 With this setup, an equivalent logic to the original Google Analytics example is as follows:
 
-<a href="#codeV2" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeV2" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeV2">
 {% highlight java %}
@@ -94,7 +94,7 @@ We don't push an event to the tracking service anymore. We push our data model a
 
 If we generalize our data model and its interaction definition, treating anything that can be interacted with as a `Trackable` object, then we can just simply dump any interaction with a `Trackable` to Google Tag Manager, or an in-house data sink, delaying the decision of what to track for another day, and move forward with the project, without having to worry about fixing the code later to change tracking logic.
 
-<a href="#codeV3" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeV3" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeV3">
 Trackable.java
@@ -154,7 +154,7 @@ public final class Analytics {
 
 Using the above `Trackable` interface and the fluent-API `Analytic.Builder` class, one can dump interaction data to Google Tag Manager as follows:
 
-<a href="#codeV4" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeV4" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeV4">
 {% highlight java %}

@@ -35,7 +35,7 @@ These components alone should be more than enough to create a decent settings ex
 
 <img src="/assets/img/settings-default.png" class="img-responsive center-block" />
 
-<center><i>Settings screen from Materialistic 1.x</i></center>
+<figcaption>Settings screen from Materialistic 1.x</figcaption>
 
 The above screenshot shows an earlier version of settings in [Materialistic](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic). Check out the implementation [here](https://github.com/hidroh/materialistic/blob/27/app/src/main/res/xml/preferences.xml) and [here](https://github.com/hidroh/materialistic/blob/27/app/src/main/java/io/github/hidroh/materialistic/SettingsFragment.java). All great, everything looks neat and material design! But as we add more preferences, each becomes harder to recognize in a long list of preferences. They all follow the same monotonous pattern. The default item layout is plain, and users are forced to go through a try-and-see cycle to get a taste of the change, which they will likely forget the next time.
 
@@ -45,7 +45,7 @@ Like this:
 
 <img src="/assets/img/settings.png" class="img-responsive center-block" />
 
-<center><i>Settings screen from Materialistic 2.0</i></center>
+<figcaption>Settings screen from Materialistic 2.0</figcaption>
 
 Looking good? Making you feel excited just to look at each option now? If your answer is yes then read on!
 
@@ -69,7 +69,7 @@ So here goes! Let's call our custom preference `SpinnerPreference`, since a [Spi
 
 Our custom widget layout can be as simple as a single `AppCompatSpinner`. We set this layout as our preference's widget layout, which leaves the default title and summary for base class implementation.
 
-<a href="#codeSpinnerPreferenceV1" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeSpinnerPreferenceV1" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeSpinnerPreferenceV1">
 
@@ -102,7 +102,7 @@ public abstract class SpinnerPreference extends Preference {
 
 The default implementation should take care of inflating our custom widget layout, creating a `PreferenceViewHolder`, leaving us the task of binding it. Here we wire up the preference click logic to open `Spinner`'s dropdown, and give it a set of items, which can be passed through [custom attributes](http://developer.android.com/training/custom-views/create-view.html#customattr) `app:entries` and `app:entryValues`, similar to `android:entries` and `android:entryValues` of [`ListPreference`](https://developer.android.com/reference/android/support/v7/preference/ListPreference.html#lattrs). Clicking a spinner dropdown item will persist its corresponding value as string here, but it can be any of the supported types.
 
-<a href="#codeSpinnerPreferenceV2" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeSpinnerPreferenceV2" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeSpinnerPreferenceV2">
 values/attrs.xml
@@ -192,7 +192,7 @@ public abstract class SpinnerPreference extends Preference {
 
 Subclasses to this abstract `SpinnerPreference` should provide implementation to create and bind each dropdown item, which is where we do our magic to spice up the instant preview. Below is an example where each dropdown item has its own typeface, retrieved via a `FontCache`, which is a map of name and typeface.
 
-<a href="#codeFontPreference" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeFontPreference" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeFontPreference">
 FontPreference.java
@@ -238,7 +238,7 @@ layout/spinner_dropdown_item.xml
 
 Of course don't forget to set the persisted preference value to our `Spinner` the next time users visit settings:
 
-<a href="#codeSpinnerPreferenceV3" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeSpinnerPreferenceV3" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeSpinnerPreferenceV3">
 SpinnerPreference.java
@@ -285,7 +285,7 @@ public abstract class SpinnerPreference extends Preference {
 
 Now add this custom preference to our preferences config and we're good to go!
 
-<a href="#codeXml" class="btn btn-info" data-toggle="collapse">Toggle code</a>
+<a href="#codeXml" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
 <div class="collapse" id="codeXml">
 xml/preferences.xml
@@ -331,7 +331,7 @@ values/arrays.xml
 
 <img src="/assets/img/settings-font.png" class="img-responsive center-block" />
 
-<center><i>Instant font preview!</i></center>
+<figcaption>Instant font preview!</figcaption>
 
 Head over to [Materialistic's Github repo](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic) for complete implementation of this and other custom preferences:
 

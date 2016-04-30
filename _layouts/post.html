@@ -4,42 +4,42 @@ layout: default
 {% if page.github %}
 <a href="https://github.com/hidroh/{{ page.github }}"><img style="position: absolute; top: 50px; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
 {% endif %}
-<article>
-  <div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1">
+<div class="row">
 
-      <h1>{{ page.title }}<br/><small>{{ page.summary }}</small></h1>
-      <h3>
-        <small>
-          <i class="fa fa-calendar"></i>&nbsp; {{ page.date | date: "%b %d, %Y" }}
-          <br/>
-          <i class="fa fa-tags"></i>&nbsp;
-          {% for tag in page.tags %}
-          <a href="/tags/{{ tag }}">{{ tag }}</a>
-          {% endfor %}
-        </small>
-      </h3>
-
-      <div class="addthis_sharing_toolbox"></div>
-
-      {{ content }}
-
-      <div class="addthis_sharing_toolbox"></div>
-
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        var disqus_shortname = 'hidroh';
-        var disqus_url = '{{ site.url }}/{{ page.url }}';
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-    </div>
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
+    <h1><center>{{ page.title }}<br /><small>{{ page.summary }}</small></center></h1>
   </div>
-</article>
+
+  <div class="col-xs-12 col-md-10 col-md-offset-1">
+    <h3>
+      <small>
+        <i class="fa fa-calendar"></i>&nbsp; {{ page.date | date: "%b %d, %Y" }}
+        <br/>
+        <i class="fa fa-tags"></i>&nbsp;
+        {% for tag in page.tags %}
+        <a href="/tags/{{ tag }}">{{ tag }}</a>,
+        {% endfor %}
+      </small>
+    </h3>
+    <div class="addthis_sharing_toolbox"></div>
+    <article>
+      {{ content }}
+    </article>
+    <div class="addthis_sharing_toolbox"></div>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'hidroh';
+      var disqus_url = '{{ site.url }}/{{ page.url }}';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </div>
+</div>

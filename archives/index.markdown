@@ -6,7 +6,7 @@ title: Blog Archives
 # {{ page.title }}
 
 {% for post in site.posts %}
-<div class="row">
+<div class="row h4">
   <div class="col-xs-4 col-sm-2 col-md-2">
     <small>{{ post.date | date: "%b %d, %Y" }}</small>
   </div>

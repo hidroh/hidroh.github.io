@@ -5,21 +5,19 @@ summary: Tips and tricks, useful patterns and implementations for Android
 ---
 
 {% for post in paginator.posts %}
+    <h3>
+      <small>
+        <i class="fa fa-calendar"></i>&nbsp; {{ post.date | date: "%b %d, %Y" }}
+      </small>
+    </h3>
+    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 
     <article>
-
-      <h3>
-        <small>
-          <i class="fa fa-calendar"></i>&nbsp; {{ post.date | date: "%b %d, %Y" }}
-        </small>
-      </h3>
-      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-
-      {{ post.excerpt }}
-
-      <a href="{{ post.url }}#more" class="btn btn-default btn-lg">Read on&nbsp;&nbsp;<i class="fa fa-long-arrow-right"></i></a>
-
+    {{ post.excerpt }}
     </article>
+
+    <a href="{{ post.url }}#more" class="btn btn-default btn-lg">Read on&nbsp;&nbsp;<i class="fa fa-long-arrow-right"></i></a>
+
     <div class="clearfix divider"></div>
 {% endfor %}
 
