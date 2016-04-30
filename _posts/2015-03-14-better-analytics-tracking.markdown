@@ -29,7 +29,7 @@ Don't get me wrong, the [Google Analytics API](https://developers.google.com/ana
 
 Coincidentally (or not!), [Google Tag Manager](https://www.google.com/tagmanager/) comes into the picture to help the abstraction of analytics tracking in a (not so) intuitive way. The idea behind Google Tag Manager is excellent, although it takes even an experienced engineer a while to logically put all its concepts in the correct place. That may explain why it does not get as [popular](https://stackoverflow.com/tags/google-tag-manager/info) as Google Analytics.
 
-<!--more-->
+<!--more-->[ ](#){: id="more"}
 
 ### Google Tag Manager explained
 

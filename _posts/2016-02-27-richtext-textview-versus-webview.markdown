@@ -16,7 +16,7 @@ For the sake of comparison, let's assume that we are given the task of displayin
 
 <a href="/assets/img/textview-webview-sample.png"><img src="/assets/img/textview-webview-sample.png" class="img-responsive center-block" style="max-height:320px" /></a>
 
-<!--more-->
+<!--more-->[ ](#){: id="more"}
 
 ### The basics
 

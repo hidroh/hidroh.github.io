@@ -11,7 +11,7 @@ report for a multi-project Gradle setup. The script will iterate through a set o
 dependencies that is manually specified and merge all `.class` and source files into
 final Jacoco report.
 
-<!--more-->
+<!--more-->[ ](#){: id="more"}
 
 {% highlight groovy %}
 apply plugin: 'jacoco'

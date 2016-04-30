@@ -14,7 +14,7 @@ Ideally, if we treat theme as a configuration, we should be able to specify them
 
 So how should we specify resources for multiple themes? If we look at how resources are organized in [`appcompat`](https://github.com/android/platform_frameworks_support/blob/master/v7/appcompat/res/values/styles.xml), we will have a rough idea of how the Android team organize their theme specific resources. [Materialistic](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic) also employs a similar approach.
 
-<!--more-->
+<!--more-->[ ](#){: id="more"}
 
 ### Theming
 

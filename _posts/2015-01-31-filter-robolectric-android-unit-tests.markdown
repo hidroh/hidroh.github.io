@@ -10,7 +10,7 @@ tags: android gradle robolectric unit-test
 
 So you enjoy it so much that over the time you add more and more tests to your test suite that it no longer feels that fast anymore everytime you rerun it for verification? Well, it still needs to launch a VM to execute your tests after all. To improve this, you can make use of [Robolectric's Gradle plugin](https://github.com/robolectric/robolectric-gradle-plugin#configuration-using-dsl) configuration to filter only tests that need to be rerun.
 
-<!--more-->
+<!--more-->[ ](#){: id="more"}
 
 {% highlight groovy %}
 robolectric {

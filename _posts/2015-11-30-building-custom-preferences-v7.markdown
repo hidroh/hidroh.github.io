@@ -19,7 +19,7 @@ Android SDK comes with 2 choices for developers who want to implement a settings
 
 Many just give up on this and either go for a bare-bone settings screen with horrible experience, or go the long way of having their own implementation. Here comes [preference-v7](https://developer.android.com/tools/support-library/features.html#v7-preference) to the rescue!
 
-<!--more-->
+<!--more-->[ ](#){: id="more"}
 
 ### preference-v7
 
