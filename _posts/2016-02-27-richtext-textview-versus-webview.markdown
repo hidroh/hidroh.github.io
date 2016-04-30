@@ -126,7 +126,7 @@ Now let's try to style `TextView` and `WebView` to render the example article on
 
 <div class="container">
     <div class="row">
-        <div class="center-block" style="max-width:75%">
+        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
             <img src="/assets/img/rendering_textview.png" style="max-width:45%" />
             <img src="/assets/img/rendering_webview.png" style="max-width:45%" />
         </div>
@@ -213,7 +213,7 @@ Using the above techniques to style `TextView` and `WebView` to display the samp
 
 <div class="container">
     <div class="row">
-        <div class="center-block" style="max-width:90%">
+        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
             <a href="/assets/img/performance_textview.png"><img src="/assets/img/performance_textview.png" style="max-width:45%" /></a>
             <a href="/assets/img/performance_webview.png"><img src="/assets/img/performance_webview.png" style="max-width:45%" /></a>
         </div>

@@ -9,8 +9,10 @@ image: /assets/img/themes.png
 ---
 
 <div class="row">
-    <div class="col-xs-6"><img src="/assets/img/multiple-theme-dark.png" class="img-responsive" /></div>
-    <div class="col-xs-6"><img src="/assets/img/multiple-theme-light.png" class="img-responsive" /></div>
+  <div class="col-xs-12 col-md-10 col-md-offset-1">
+    <img src="/assets/img/multiple-theme-dark.png" style="max-width:45%" />
+    <img src="/assets/img/multiple-theme-light.png" style="max-width:45%" />
+  </div>
 </div>
 
 Recently, I have been working on my news reader app for Hacker News, [Materialistic](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic). As in any news reader apps, one of the most popular user feature request is ability to choose between light/dark theme for reading preference. Fortunately, supporting multiple themes in Android is quite easy and natural (given that you started properly). This blog explains the approach used by [Materialistic](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic) to support multiple themes.
