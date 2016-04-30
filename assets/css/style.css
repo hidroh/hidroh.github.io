@@ -45,31 +45,27 @@ a#more {
 .btn {
   font-family: 'Open Sans';
 }
-.navbar {
-  background-color: #039BE5;
-}
-.icon-bar {
+.navbar-default {
   background-color: #FFF;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
 }
-.navbar-toggle {
-  border-color: #FFF;
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
+  color: #607D8B;
 }
-.navbar-toggle:hover {
-  border-color: #FFF;
-  background-color: #B3E5FC;
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover {
+  color: #607D8B;
+  background-color: #ECEFF1;
 }
-.brand-text {
-  color: #FFF;
+.navbar-default .navbar-toggle {
+  border-color: #607D8B;
 }
-.brand-text:hover {
-  color: #B3E5FC;
+.navbar-default .navbar-toggle:hover {
+  background-color: #ECEFF1;
 }
-.navbar-nav > li > a {
-  color: #EEE;
-}
-.navbar-nav > li > a:hover {
-  background-color: #B3E5FC;
-  color: #039BE5;
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #607D8B;
 }
 .btn-xl {
   padding: 10px 16px;
