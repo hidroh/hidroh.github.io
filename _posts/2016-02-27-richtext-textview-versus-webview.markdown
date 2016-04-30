@@ -234,7 +234,7 @@ So the trade-off here is between memory versus CPU & GPU consumption.
 
 Applying above techniques to style `WebView` or handle images in `TextView` does not come for free. By 'preprocessing' our content for rendering, we inherently add certain inital delay to our user experience. A video is best demonstrates this point:
 
-<iframe width="420" height="315" class="center-block" src="https://www.youtube.com/embed/greJFB4YJg4" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" class="center-block video-portrait" src="https://www.youtube.com/embed/greJFB4YJg4" frameborder="0" allowfullscreen></iframe>
 
 This initial delay may vary depending on devices. On high end devices it may not be noticeable, but we all know how many low end Android devices are around! Using a progress indicator when applicable would surely smoothen the experience.
 

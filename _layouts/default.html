@@ -81,15 +81,11 @@
   </header>
 
   <div class="container">
-    {% if page.date %}
-      {{ content }}
-    {% else %}
-      <div class="row">
-        <div class="col-xs-12 col-md-10 col-md-offset-1">
-          {{ content }}
-        </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+        {{ content }}
       </div>
-    {% endif %}
+    </div>
   </div>
 
   <div class="clearfix divider"></div>
