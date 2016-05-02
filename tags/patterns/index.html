@@ -23,6 +23,21 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link href="/assets/css/style.css" rel="stylesheet" />
+  <script type="text/javascript">
+    function hasLocalStorage() {
+      try {
+        return 'localStorage' in window && window['localStorage'] !== null;
+      } catch (e) {
+        return false;
+      }
+    }
+    if (hasLocalStorage() && localStorage.dark === "true") {
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "/assets/css/dark.css";
+      document.head.appendChild(link);
+    }
+  </script>
 </head>
 
 <body>
@@ -58,19 +73,19 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/about">Me</a></li>
             <li>
-              <a href="https://twitter.com/hadt" alt="Twitter" target="_blank"><i class="fa fa-twitter fa-lg" style="color: #55acee;"></i></a>
+              <a href="https://twitter.com/hadt" alt="Twitter" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
             </li>
             <li>
-              <a href="https://github.com/hidroh" alt="GitHub" target="_blank"><i class="fa fa-github fa-lg" style="color: #333333;"></i></a>
+              <a href="https://github.com/hidroh" alt="GitHub" target="_blank"><i class="fa fa-github fa-lg"></i></a>
             </li>
             <li>
-              <a href="https://sg.linkedin.com/in/trunghd" alt="LinkedIn" target="_blank"><i class="fa fa-linkedin fa-lg" style="color: #0077B5;"></i></a>
+              <a href="https://sg.linkedin.com/in/trunghd" alt="LinkedIn" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
             </li>
             <li>
-              <a href="https://stackoverflow.com/users/836540/hidro" alt="StackOverflow" target="_blank"><i class="fa fa-stack-overflow fa-lg" style="color: #fe7a15;"></i></a>
+              <a href="https://stackoverflow.com/users/836540/hidro" alt="StackOverflow" target="_blank"><i class="fa fa-stack-overflow fa-lg"></i></a>
             </li>
             <li>
-              <a alt="RSS Feed" href="/feed.xml"><i class="fa fa-rss fa-lg" style="color: #f26522;"></i></a>
+              <a alt="RSS Feed" href="/feed.xml"><i class="fa fa-rss fa-lg"></i></a>
             </li>
           </ul>
         </div>
@@ -79,10 +94,9 @@
   </header>
 
   <div class="container">
-    
-      <div class="row">
-        <div class="col-xs-12 col-md-10 col-md-offset-1">
-          <h1>Posts tagged &ldquo;patterns&rdquo;</h1>
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <h1>Posts tagged &ldquo;patterns&rdquo;</h1>
 
 
 
@@ -257,14 +271,13 @@
 
 
 
-        </div>
       </div>
-    
+    </div>
   </div>
 
   <div class="clearfix divider"></div>
   <footer>
-    <p class="text-center"><small>Copyright &copy; 2016 Ha Duy Trung. Powered by <a href="https://jekyllrb.com">Jekyll</a></small></p>
+    <p class="text-center"><small>Copyright &copy; 2016 Ha Duy Trung. Powered by <a href="https://jekyllrb.com">Jekyll</a>.<br /><a href="." id="theme">Switch to dark theme</a></small></p>
   </footer>
 
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -288,6 +301,15 @@
       $("html,body").animate({ scrollTop: 0 }, "fast");
       return true;
     });
+    $("#theme").click(function() {
+      if (hasLocalStorage()) {
+        localStorage.dark = localStorage.dark === "true" ? "false" : "true";
+      }
+    });
+    if (hasLocalStorage() && localStorage.dark === "true") {
+      $("#theme").text("Switch to light theme");
+      $("meta[name='theme-color']").attr("content", "#263238");
+    }
   </script>
 
 </body>
