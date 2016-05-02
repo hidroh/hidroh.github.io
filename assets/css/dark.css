@@ -69,6 +69,12 @@ code {
 .fa-linkedin {
   color: #00a0dc;
 }
+td {
+  background-color: transparent !important;
+}
+tr:hover {
+  background-color: #455A64 !important;
+}
 pre {
   border: 1px solid #455A64;
 }
