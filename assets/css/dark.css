@@ -1,0 +1,71 @@
+body {
+  background-color: #263238;
+  color: #CFD8DC;
+}
+h1, h1>a, h2, h3, h4, h5, h6 {
+  color: #FFF;
+}
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small,
+.h1 .small,
+.h2 .small,
+.h3 .small,
+.h4 .small,
+.h5 .small,
+.h6 .small,
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small {
+  color: #BDBDBD;
+}
+a {
+  color: #039BE5;
+}
+a:hover {
+  color: #4FC3F7;
+}
+code {
+  color: #CFD8DC;
+  background-color: #455A64;
+}
+.divider {
+  border-bottom: 1px solid #455A64;
+}
+.navbar-default {
+  background-color: #37474F;
+  -webkit-box-shadow: 0 8px 6px -6px #212121;
+  -moz-box-shadow: 0 8px 6px -6px #212121;
+  box-shadow: 0 8px 6px -6px #212121;
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
+  color: #CFD8DC;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover {
+  color: #CFD8DC;
+  background-color: #455A64;
+}
+.navbar-default .navbar-toggle:hover {
+  background-color: #455A64;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #CFD8DC;
+}
+.fa-github {
+  color: #999;
+}
+.fa-linkedin {
+  color: #00a0dc;
+}
