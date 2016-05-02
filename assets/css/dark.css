@@ -69,6 +69,11 @@ code {
 .fa-linkedin {
   color: #00a0dc;
 }
+.bs-callout {
+  border-top-color: #455A64;
+  border-right-color: #455A64;
+  border-bottom-color: #455A64;
+}
 td {
   background-color: transparent !important;
 }
