@@ -25,6 +25,21 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link href="/assets/css/style.css" rel="stylesheet" />
+  <script type="text/javascript">
+    function hasLocalStorage() {
+      try {
+        return 'localStorage' in window && window['localStorage'] !== null;
+      } catch (e) {
+        return false;
+      }
+    }
+    if (hasLocalStorage() && localStorage.dark === "true") {
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "/assets/css/dark.css";
+      document.head.appendChild(link);
+    }
+  </script>
 </head>
 
 <body>
@@ -110,13 +125,6 @@
     }());
   </script>
   <script type="text/javascript">
-    function hasLocalStorage() {
-      try {
-        return 'localStorage' in window && window['localStorage'] !== null;
-      } catch (e) {
-        return false;
-      }
-    }
     $("header").click(function() {
       $("html,body").animate({ scrollTop: 0 }, "fast");
       return true;
@@ -129,7 +137,6 @@
     if (hasLocalStorage() && localStorage.dark === "true") {
       $("#theme").text("Switch to light theme");
       $("meta[name='theme-color']").attr("content", "#263238");
-      $("head").append($("<link>").attr("href", "/assets/css/dark.css").attr("rel", "stylesheet"));
     }
   </script>
 
