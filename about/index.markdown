@@ -5,7 +5,7 @@ title: About Me
 
 # {{ page.title }}
 
-![Alt text](https://avatars1.githubusercontent.com/u/1978015?v=3&s=150){: style="border-radius: 50%;"}
+![Alt text](https://avatars1.githubusercontent.com/u/1978015?v=3&s=150){: class="img-circle"}
 
 Currently cooking, brewing and building Android stuffs. My past experience includes full-stack web development in different technology stacks: PHP, Ruby and C#, and exposure to Scrum agile framework, test-driven development (TDD), behaviour-driven development (BDD) and automation. I love writing code as much as testing them. View my public CV [here](/cv){: target="_blank"}.
 
