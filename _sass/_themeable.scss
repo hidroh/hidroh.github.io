@@ -41,6 +41,18 @@ code { color: $textColorPrimary; background-color: $colorDivider; }
     .icon-bar { background-color: $textColorPrimary; }
   }
 }
+.btn-default,
+.btn-default:active,
+.btn-default:focus {
+  color: $textColorTertiary;
+  background-color: $colorPrimary;
+  border-color: $colorDivider
+}
+.btn-default:hover {
+  color: $textColorTertiary;
+  background-color: $colorPrimaryHighlight;
+  border-color: $colorDivider
+}
 .bs-callout { border: $sizeBorder solid $colorDivider; }
 .bs-callout-default { border-left-color: $calloutDefault; }
 .bs-callout-default h4 { color: $calloutDefault; }
