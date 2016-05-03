@@ -8,7 +8,7 @@ title: Tag Cloud
 {% assign tags = site.tags | sort %}
 {% for tag in tags %}
   {% if tag[1].size >= 10 %}
-    {% assign size = 'btn-xl' %}
+    {% assign size = 'btn-lg btn-xl' %}
     {% assign type = 'btn-primary' %}
   {% elsif tag[1].size >= 5 %}
     {% assign size = 'btn-lg' %}

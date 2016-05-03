@@ -1,0 +1,56 @@
+$sizeBorder: 1px;
+
+@mixin navbarShadow() {
+  -webkit-box-shadow: 0 8px 6px -6px $colorShadow;
+  -moz-box-shadow: 0 8px 6px -6px $colorShadow;
+  box-shadow: 0 8px 6px -6px $colorShadow;
+}
+
+body { background-color: $background; color: $textColorTertiary; }
+h1, h1>a, h2, h3, h4, h5, h6 { color: $textColorEmphasis; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  small, .small { color: $textColorSecondary; }
+}
+a { color: $textColorLink; }
+a:hover { color: $textColorLinkHover; }
+pre { border: $sizeBorder solid $colorDivider; }
+code { color: $textColorPrimary; background-color: $colorDivider; }
+.divider { border-bottom: $sizeBorder solid $colorDivider; }
+.fa-github { color: $brandColorGithub; }
+.fa-linkedin { color: $brandColorLinkedIn; }
+.fa-twitter { color: $brandColorTwitter; }
+.fa-stack-overflow { color: $brandColorStackOverflow; }
+.fa-rss { color: $brandColorRss; }
+.navbar { border-bottom: $sizeBorder solid $colorShadow; }
+.navbar-default {
+  background-color: $colorPrimary;
+  @include navbarShadow();
+  .navbar-brand,
+  .navbar-brand:hover,
+  .navbar-nav>li>a,
+  .navbar-nav>li>a:hover {
+    color: $textColorPrimary;
+  }
+  .navbar-brand:hover,
+  .navbar-nav>li>a:hover,
+  .navbar-toggle:hover {
+    background-color: $colorPrimaryHighlight;
+  }
+  .navbar-toggle {
+    border-color: transparent;
+    .icon-bar { background-color: $textColorPrimary; }
+  }
+}
+.bs-callout { border: $sizeBorder solid $colorDivider; }
+.bs-callout-default { border-left-color: $calloutDefault; }
+.bs-callout-default h4 { color: $calloutDefault; }
+.bs-callout-primary { border-left-color: $calloutPrimary; }
+.bs-callout-primary h4 { color: $calloutPrimary; }
+.bs-callout-success { border-left-color: $calloutSuccess; }
+.bs-callout-success h4 { color: $calloutSuccess; }
+.bs-callout-danger { border-left-color: $calloutDanger; }
+.bs-callout-danger h4 { color: $calloutDanger; }
+.bs-callout-warning { border-left-color: $calloutWarning; }
+.bs-callout-warning h4 { color: $calloutWarning; }
+.bs-callout-info { border-left-color: $calloutInfo; }
+.bs-callout-info h4 { color: $calloutInfo; }

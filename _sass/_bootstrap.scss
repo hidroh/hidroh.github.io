@@ -1,0 +1,30 @@
+$fontDefault: 'Open Sans';
+$fontEmphasis: $fontDefault;
+$fontArticle: 'Lora';
+$fontMonospace: 'Inconsolata';
+$sizeFont: 18px;
+$sizeFontLg: 24px;
+$sizeFontSm: 16px;
+$sizeMarginLg: 20px;
+$sizeBorderRadius: 3px;
+$sizeNavbar: 50px;
+
+body { padding-top: $sizeNavbar; font-family: $fontDefault; font-size: $sizeFont; }
+b, strong, h1, h2, h3, h4, h5, h6 { font-family: $fontEmphasis; }
+b, strong, h1, h2, h3 { font-weight: 700; }
+a>code { text-decoration: underline; }
+article { font-family: $fontArticle; line-height: 175%; }
+figcaption { text-align: center; font-style: italic; font-size: $sizeFontSm; font-family: $fontDefault; }
+code { font-family: $fontMonospace; }
+pre {
+  word-break: normal;
+  word-wrap: normal;
+  code { white-space: inherit; font-size: $sizeFontSm; }
+}
+a#more { display: block; position: relative; top: -$sizeNavbar; visibility: hidden; }
+.video-portrait {width: 50.625vh; height: 90vh;} /* 9:16 */
+.video-landscape {width: 90vw; height: 50.625vw;} /* 16:9 */
+.divider { margin: $sizeMarginLg; }
+.btn-xl { font-size: $sizeFontLg; }
+.btn { font-family: $fontDefault; }
+.bs-callout { padding: $sizeMarginLg; margin: $sizeMarginLg; border-radius: $sizeBorderRadius; }

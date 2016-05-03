@@ -1,0 +1,21 @@
+@import 'color_default';
+
+$background: #263238;
+$colorPrimary: #37474F;
+$colorPrimaryHighlight: #455A64;
+$colorDivider: $colorPrimaryHighlight;
+$colorShadow: #212121;
+$textColorEmphasis: #FFF;
+$textColorTertiary: #CFD8DC;
+$textColorPrimary: $textColorTertiary;
+$textColorSecondary: #BDBDBD;
+$textColorLink: #039BE5;
+$textColorLinkHover: #4FC3F7;
+
+$brandColorGithub: #999;
+$brandColorLinkedIn: #00a0dc;
+
+td { background-color: transparent !important; }
+tr:hover { background-color: $colorDivider !important; }
+
+@import 'pygments_darcula';
