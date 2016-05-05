@@ -40,6 +40,7 @@ code { color: $textColorPrimary; background-color: $colorDivider; }
     border-color: transparent;
     .icon-bar { background-color: $textColorPrimary; }
   }
+  .navbar-collapse { border-color: $colorDivider; }
 }
 .dropdown-menu { background-color: $colorPrimaryHighlight; }
 .btn-default,
