@@ -28,3 +28,13 @@ a#more { display: block; position: relative; top: -$sizeNavbar; visibility: hidd
 .btn-xl { font-size: $sizeFontLg; }
 .btn { font-family: $fontDefault; }
 .bs-callout { padding: $sizeMarginLg; margin: $sizeMarginLg; border-radius: $sizeBorderRadius; }
+@media print {
+  [data-toggle="collapse"] {
+    display: none;
+    visibility: hidden;
+  }
+  .collapse {
+      display: inherit;;
+      visibility: visible;
+  }
+}
