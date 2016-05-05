@@ -147,7 +147,8 @@
     }());
   </script>
   <script type="text/javascript">
-    $("header").click(function() {
+    $("nav").click(function(evt) {
+      if ("DIV" !== evt.target.tagName) { return true; }
       $("html,body").animate({ scrollTop: 0 }, "fast");
       return true;
     });
