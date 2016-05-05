@@ -26,14 +26,14 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link href="/assets/css/style.css" rel="stylesheet" />
   <script type="text/javascript">
-    function hasLocalStorage() {
+    function supportLocalStorage() {
       try {
         return 'localStorage' in window && window['localStorage'] !== null;
       } catch (e) {
         return false;
       }
     }
-    if (hasLocalStorage() && localStorage.dark === "true") {
+    if (supportLocalStorage() && localStorage.dark === "true") {
       var link = document.createElement("link");
       link.rel = "stylesheet";
       link.href = "/assets/css/dark.css";
@@ -89,11 +89,27 @@
             <li>
               <a alt="RSS Feed" href="/feed.xml"><i class="fa fa-rss fa-lg"></i></a>
             </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-search"></i></a>
+              <ul class="dropdown-menu" style="width: 300px;">
+                <li>
+                  <form id="search-form" method="get" action="/search" style="margin: 8px;">
+                    <div class="input-group">
+                      <input id="search-input" type="text" class="form-control" placeholder="Search (powered by Tapir)" name="query">
+                      <span id="search-submit" class="input-group-addon btn"><i class="fa fa-search"></i></span>
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
+
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
   <div class="container">
     <div class="row">
@@ -105,11 +121,17 @@
 
   <div class="clearfix divider"></div>
   <footer>
-    <p class="text-center"><small>Copyright &copy; {{ site.time | date: '%Y' }} {{ site.name }}. Powered by <a href="https://jekyllrb.com">Jekyll</a>.<br /><a href="." id="theme">Switch to dark theme</a></small></p>
+    <div class="text-center small">
+      <p>
+        Copyright &copy; {{ site.time | date: '%Y' }} {{ site.name }}.
+        Powered by <a href="https://jekyllrb.com">Jekyll</a>.
+      </p>
+      <p>
+        <a href="" id="theme">Switch to dark theme</a>
+      </p>
+    </div>
   </footer>
 
-  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=hadt" async="async"></script>
 
@@ -130,14 +152,18 @@
       return true;
     });
     $("#theme").click(function() {
-      if (hasLocalStorage()) {
+      if (supportLocalStorage()) {
         localStorage.dark = localStorage.dark === "true" ? "false" : "true";
       }
+      location.reload();
     });
-    if (hasLocalStorage() && localStorage.dark === "true") {
+    if (supportLocalStorage() && localStorage.dark === "true") {
       $("#theme").text("Switch to light theme");
       $("meta[name='theme-color']").attr("content", "#263238");
     }
+    $("#search-submit").click(function() {
+      $("#search-form").submit();
+    })
   </script>
 
 </body>

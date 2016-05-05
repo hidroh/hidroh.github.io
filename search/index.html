@@ -1,0 +1,31 @@
+---
+layout: default
+title: Ha Duy Trung | Blog Search
+sitemap: false
+---
+
+<h1 id="title">Posts matched</h1>
+
+<div id="search_results">
+  <div id="placeholder">
+    <p>Searching a thousand years of archives...</p>
+    <p><img src="/assets/img/gears.svg" /></p>
+  </div>
+</div>
+
+<script type="text/javascript" src="/assets/javascript/search.js"></script>
+<script type="text/javascript" src="/assets/javascript/jquery-tapir.js"></script>
+<script type="text/javascript">
+  appendTitle(" \"" + paramValue("query") + "\"");
+  if (supportHistory() && history.state !== null) {
+    format($('#search_results'), history.state);
+  } else {
+    jQuery(function() {
+      $('#search_results').tapir({
+        'token': '572ab08d14ad666f4543ab7a',
+        'query': paramValue("query"),
+        'complete': function(el, data) { format(el, data); }
+      });
+    });
+  }
+</script>

@@ -7,7 +7,7 @@ $sizeBorder: 1px;
 }
 
 body { background-color: $background; color: $textColorTertiary; }
-h1, h1>a, h2, h3, h4, h5, h6 { color: $textColorEmphasis; }
+h1, h1>a, h2, h2>a, h3, h4, h5, h6 { color: $textColorEmphasis; }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   small, .small { color: $textColorSecondary; }
 }
@@ -41,6 +41,7 @@ code { color: $textColorPrimary; background-color: $colorDivider; }
     .icon-bar { background-color: $textColorPrimary; }
   }
 }
+.dropdown-menu { background-color: $colorPrimaryHighlight; }
 .btn-default,
 .btn-default:active,
 .btn-default:focus {
