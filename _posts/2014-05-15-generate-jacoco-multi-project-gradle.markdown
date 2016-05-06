@@ -6,6 +6,8 @@ summary: "Configuring Gradle build system to combine Jacoco and Android plugins 
 tags: android jacoco coverage robolectric gradle testing
 ---
 
+<div class="cap"></div>
+
 An example of how to configure Jacoco task in your `build.gradle` to generate coverage
 report for a multi-project Gradle setup. The script will iterate through a set of
 dependencies that is manually specified and merge all `.class` and source files into

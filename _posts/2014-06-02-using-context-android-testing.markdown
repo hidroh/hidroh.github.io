@@ -6,6 +6,8 @@ summary: "Creating an interface for Android's Context to break direct dependency
 tags: android tdd context mock patterns testing
 ---
 
+<div class="cap"></div>
+
 If you are keen on doing TDD with Android, you may have stumbled upon the dreaded `java.lang.RuntimeException: Stub!` when you try to test drive your code with different contexts as input. For us, most of the time we use context is to get some resources out of it, either string, bool, raw, you name it. These resources may change execution behavior, and thus we are required to test with different resources to cover all cases.
 
 Soon you learn that it is not straightforward to get the default Android’s [`Context`](http://developer.android.com/reference/android/content/Context.html) out of the way, even with [`MockContext`](http://developer.android.com/reference/android/test/mock/MockContext.html). That is one of the reasons why we see test frameworks such as [Robolectric](http://robolectric.org/) (or mock framework such as [Mockito](https://code.google.com/p/mockito/), [PowerMock](https://code.google.com/p/powermock/)) getting popular. While it is convenient to let Robolectric build an activity for you and use it as the context, or mock up your own context using Mockito, there is a more structured way of making Context work for you in testing.

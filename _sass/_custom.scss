@@ -1,0 +1,15 @@
+a#more { display: block; position: relative; top: -$sizeNavbar; visibility: hidden; }
+.video-portrait {width: 50.625vh; height: 90vh;} /* 9:16 */
+.video-landscape {width: 90vw; height: 50.625vw;} /* 16:9 */
+.divider { margin: $sizeMarginLg; }
+.btn-xl { font-size: $sizeFontLg; }
+.row .author { margin-top: 8px; margin-bottom: 8px; }
+.author>a{ padding: 8px; }
+.drop-caps .cap { display: none; visibility: hidden; }
+.drop-caps .cap + p::first-letter {
+  float: left;
+  font-size: 90px;
+  line-height: 100%;
+  font-weight: 700;
+  padding-right: 8px;
+}

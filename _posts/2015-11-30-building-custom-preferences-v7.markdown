@@ -10,6 +10,8 @@ image: /assets/img/settings.png
 
 *\* This article is meant for advanced UI customization of preferences. For basics, check out [Android API guide](http://developer.android.com/guide/topics/ui/settings.html).*
 
+<div class="cap"></div>
+
 [Settings](http://www.google.com/design/spec/patterns/settings.html) or preferences are one of those semi-essential components that make our app feel more personal to users, by giving them choices to tailor their own experience. Preferences are especially popular in apps for 'power' users, where they are presented with a bloat of settings. They are also important in apps where users are opinionated in terms of what makes great experience, e.g. reading apps. Yet building a great settings section in Android has always been a source of pain, at least until recently.
 
 Android SDK comes with 2 choices for developers who want to implement a settings screen, each has its own shortfalls:

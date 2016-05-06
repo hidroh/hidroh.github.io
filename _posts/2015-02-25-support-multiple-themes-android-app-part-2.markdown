@@ -8,6 +8,8 @@ github: materialistic
 image: /assets/img/themes.png
 ---
 
+<div class="cap"></div>
+
 In the [first part]({% post_url 2015-02-16-support-multiple-themes-android-app %}) of this post, we have created a light theme and made initial preparation to support multiple themes. In this blog post, we will continue that effort, creating another theme and allowing dynamic switching of themes during runtime.
 
 Ideally, if we treat theme as a configuration, we should be able to specify theme-specific resources under a 'theme-qualifier' resources directory, e.g. `values-dark` for dark theme resources and `values-light` for light theme resources. Unfortunately, this is not yet an option at the time of this post.

@@ -9,6 +9,8 @@ image: /assets/img/parallel-cover.jpg
 
 <img src="/assets/img/parallel-cover.jpg" class="img-responsive center-block" />
 
+<div class="cap"></div>
+
 It is common for apps from the same vendor serving multiple markets to share the same UI logic with variants, or flavors. As the product grows, or more variants are introduced for new market, the time it takes to test all those variants increases propotionally with the number of variants. Even with the support of UI automation frameworks, such as [Calabash Android](https://github.com/calabash/calabash-android), an original daily automation suite of 2 hours can quickly grow into a staggering 8-hour job for 4 product variants.
 
 This blog post introduces an approach to drastically reduce automation time in such cases, by concurrently executing UI automation for different product variants via a Continuous Integration (CI) server. We choose to run UI automation tests on actual devices rather than emulators for several reasons:

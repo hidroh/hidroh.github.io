@@ -8,6 +8,8 @@ github: richtext
 image: /assets/img/rendering_webview.png
 ---
 
+<div class="cap"></div>
+
 So, say we have a piece of rich text, most probably in the form of HTML (e.g. a simplified HTML made for mobile reading), what kind of widget is best used to display it? How do we achieve the flexible yet rich reading experience from popular mobile readers like Readability, Pocket, or [Materialistic](https://github.com/hidroh/materialistic) (!)?
 
 In this article, we will explore two very popular and powerful widgets that has been available since API 1: [`TextView`](https://developer.android.com/reference/android/widget/TextView.html) and [`WebView`](https://developer.android.com/reference/android/webkit/WebView.html), for the purpose of rich text rendering. The article does not aim to provide a comprehensive comparison, but rather touches on several critical desicion making points.

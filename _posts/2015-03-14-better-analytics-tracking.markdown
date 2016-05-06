@@ -6,6 +6,8 @@ summary: "Migrating from Google Analytics to Google Tag Manager to future proof 
 tags: google-analytics google-tagmanager android patterns
 ---
 
+<div class="cap"></div>
+
 [Google Analytics](https://www.google.com/analytics/) is great. I love it! People at my company love it! It tells you so many things about how your audience uses your app. But once your feet are deep into the analytics game, your application will probably end up with a bunch of clunky analytics tracking code as below:
 
 <a href="#codeV1" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>

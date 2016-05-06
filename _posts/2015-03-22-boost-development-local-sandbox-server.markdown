@@ -8,6 +8,8 @@ image: /assets/img/chuck-norris-test-production.jpg
 github: hackernews-sandbox
 ---
 
+<div class="cap"></div>
+
 When we are doing unit testing, more often than not we will probably stumble upon external dependencies that we wish we could just get them out of the way to focus on the testing task at hand. That is when [mocking, stubbing, faking](http://martinfowler.com/articles/mocksArentStubs.html) comes in handy.
 
 If we apply these techniques in a broader context, says for app testing, where our external dependencies are web services, how do we consistently and reliably test our app against the ever changing data returned by real API calls? That is when we need a [sandbox](http://en.wikipedia.org/wiki/Sandbox_%28software_development%29) server.
