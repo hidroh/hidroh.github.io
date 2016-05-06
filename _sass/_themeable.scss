@@ -60,6 +60,10 @@ code { color: $textColorPrimary; background-color: $colorDivider; }
   background-color: $colorPrimaryHighlight;
   border-color: $colorDivider
 }
+.btn-default .badge {
+  color: $textColorInverse;
+  background-color: $textColorPrimary;
+}
 .bs-callout { border: $sizeBorder solid $colorDivider; }
 .bs-callout-default { border-left-color: $calloutDefault; }
 .bs-callout-default h4 { color: $calloutDefault; }
