@@ -15,6 +15,8 @@ layout: default
 <h3>
   <small>
     <i class="fa fa-calendar"></i>&nbsp; {{ page.date | date: "%b %d, %Y" }}
+    -
+    <i class="fa fa-clock-o"></i>&nbsp; <span class="eta"></span> read
     <br/>
     <i class="fa fa-tags"></i>&nbsp;
     {% for tag in page.tags %}
@@ -77,7 +79,9 @@ layout: default
 </button>
 
 <div id="disqus_thread" class="collapse"></div>
+<script src="/assets/javascript/readingTime.js" type="text/javascript"></script>
 <script type="text/javascript">
+  $('article').readingTime();
   var SHARE_PROVIDERS = {
     "facebook": "https://www.facebook.com/share.php?src=bm&v=4&i=1462529243&u={0}&t={1}",
     "googleplus": "https://plus.google.com/share?url={0}",
