@@ -28,21 +28,26 @@ code { color: $textColorPrimary; background-color: $colorDivider; }
   .navbar-brand,
   .navbar-brand:hover,
   .navbar-nav>li>a,
-  .navbar-nav>li>a:hover {
+  .navbar-nav>li>a:hover,
+  .navbar-toggle,
+  .navbar-toggle:hover {
     color: $textColorPrimary;
   }
   .navbar-brand:hover,
+  .navbar-nav>.open>a,
+  .navbar-nav>.open>a:hover,
+  .navbar-nav>.open>a:focus,
   .navbar-nav>li>a:hover,
   .navbar-toggle:hover {
+    color: $textColorPrimary;
     background-color: $colorPrimaryHighlight;
   }
-  .navbar-toggle {
-    border-color: transparent;
-    .icon-bar { background-color: $textColorPrimary; }
-  }
-  .navbar-collapse { border-color: $colorDivider; }
+  .navbar-toggle { border-color: transparent; }
+  .navbar-collapse { border-color: transparent; }
 }
-.dropdown-menu { background-color: $colorPrimaryHighlight; }
+.dropdown-menu { background-color: $colorPrimary; }
+.dropdown-menu>a:hover { background-color: $colorPrimaryHighlight; }
+.dropdown-menu-flex>a, .dropdown-menu-flex>a:hover { color: $textColorPrimary; text-decoration: none; }
 .btn-default,
 .btn-default:active,
 .btn-default:focus {
