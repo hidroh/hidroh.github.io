@@ -28,6 +28,7 @@ a#more { display: block; position: relative; top: -$sizeNavbar; visibility: hidd
 .btn-xl { font-size: $sizeFontLg; }
 .dropdown-menu { min-width: 225px; padding: 10px; }
 .dropdown-menu-flex>a { padding: 10px; }
+.btn-group .dropdown-menu .fa { width: 18px; margin-right: 8px; }
 .btn { font-family: $fontDefault; }
 .bs-callout { padding: $sizeMarginLg; margin: $sizeMarginLg; border-radius: $sizeBorderRadius; }
 .navbar-toggle { padding-top: 5px; padding-bottom: 5px; }

@@ -16,10 +16,15 @@ a:hover { color: $textColorLinkHover; }
 pre { border: $sizeBorder solid $colorDivider; }
 code { color: $textColorPrimary; background-color: $colorDivider; }
 .divider { border-bottom: $sizeBorder solid $colorDivider; }
+.fa-facebook { color: $brandColorFacebook; }
+.fa-get-pocket { color: $brandColorPocket; }
 .fa-github { color: $brandColorGithub; }
+.fa-google-plus { color: $brandColorGooglePlus; }
+.fa-hacker-news { color: $brandColorHackerNews; }
 .fa-linkedin { color: $brandColorLinkedIn; }
 .fa-twitter { color: $brandColorTwitter; }
 .fa-stack-overflow { color: $brandColorStackOverflow; }
+.fa-reddit-alien { color: $brandColorReddit; }
 .fa-rss { color: $brandColorRss; }
 .navbar { border-bottom: $sizeBorder solid $colorShadow; }
 .navbar-default {
@@ -48,16 +53,21 @@ code { color: $textColorPrimary; background-color: $colorDivider; }
 .dropdown-menu { background-color: $colorPrimary; }
 .dropdown-menu>a:hover { background-color: $colorPrimaryHighlight; }
 .dropdown-menu-flex>a, .dropdown-menu-flex>a:hover { color: $textColorPrimary; text-decoration: none; }
+.dropdown-menu>li>a { color: $textColorPrimary; }
+.dropdown-menu>li>a:hover { color: $textColorPrimary; background-color: $colorPrimaryHighlight; }
+.btn-default-hl {
+  color: $textColorTertiary;
+  background-color: $colorPrimaryHighlight;
+  border-color: $colorDivider
+}
+.btn-default:hover, .open>.dropdown-toggle.btn-default {
+  @extend .btn-default-hl;
+}
 .btn-default,
 .btn-default:active,
 .btn-default:focus {
   color: $textColorTertiary;
   background-color: $colorPrimary;
-  border-color: $colorDivider
-}
-.btn-default:hover {
-  color: $textColorTertiary;
-  background-color: $colorPrimaryHighlight;
   border-color: $colorDivider
 }
 .btn-default .badge {
