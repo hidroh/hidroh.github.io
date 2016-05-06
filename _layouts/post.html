@@ -83,6 +83,20 @@ layout: default
 <div id="disqus_thread" class="collapse">
   {% if jekyll.environment == "development" %}Disqus comments{% endif %}
 </div>
+
+<div class="clearfix divider"></div>
+
+<nav>
+  <ul class="pager">
+  {% if page.next.url %}
+    <li class="previous small"><a href="{{ page.next.url }}">&larr; {{ page.next.title | truncatewords: 3 }}</a></li>
+  {% endif %}
+  {% if page.previous.url %}
+    <li class="next small"><a href="{{ page.previous.url }}">{{ page.previous.title | truncatewords: 3 }} &rarr;</a></li>
+  {% endif %}
+  </ul>
+</nav>
+
 <script src="/assets/javascript/share.js" type="text/javascript"></script>
 <script src="/assets/javascript/readingTime.js" type="text/javascript"></script>
 <script type="text/javascript">
