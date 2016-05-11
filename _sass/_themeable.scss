@@ -50,6 +50,7 @@ code { color: $textColorPrimary; background-color: $colorDivider; }
   }
   .navbar-toggle { border-color: transparent; }
   .navbar-collapse { border-color: transparent; }
+  .navbar-form { border: none; }
 }
 .dropdown-menu { background-color: $colorPrimary; }
 .dropdown-menu>a:hover { background-color: $colorPrimaryHighlight; }
@@ -57,6 +58,17 @@ code { color: $textColorPrimary; background-color: $colorDivider; }
 .dropdown-menu>li>a { color: $textColorPrimary; }
 .dropdown-menu>li>a:hover { @extend .a-blk-hover; }
 .author>a:hover { @extend .a-blk-hover; }
+.form-control-material {
+  width: 100%;
+  padding-right: 42.5px;
+  border: none;
+  border-bottom: $sizeBorder solid $colorDivider;
+}
+.form-control-material:focus {
+  outline: none;
+  border-bottom: $sizeBorder solid $textColorPrimary;
+}
+#search-form { color: $textColorPrimary; }
 .btn-default-hl {
   color: $textColorTertiary;
   background-color: $colorPrimaryHighlight;
