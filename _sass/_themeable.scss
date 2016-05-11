@@ -69,6 +69,7 @@ code { color: $textColorPrimary; background-color: $colorDivider; }
   border-bottom: $sizeBorder solid $textColorPrimary;
 }
 #search-form { color: $textColorPrimary; }
+#search-input { background-color: transparent; }
 .btn-default-hl {
   color: $textColorTertiary;
   background-color: $colorPrimaryHighlight;
