@@ -24,7 +24,7 @@ Recently, I have been working on my news reader app for Hacker News, [Materialis
 What you need:
 
 - At least 2 app themes that extend from base light/dark Android themes. If you use latest [appcompat-v7](http://developer.android.com/tools/support-library/features.html#v7-appcompat) it would be `Theme.AppCompat.Light` or `Theme.AppCompat.Light.DarkActionBar` (light version) and `Theme.AppCompat` (dark version).
-- Color palette for each of your theme. A guideline for color palette can be found on [Google design spec website](http://www.google.com/design/spec/style/color.html#color-color-palette).
+- Color palette[^color-palette] for each of your theme.
 - [Optional] tinted options menu icons for each of you theme. Depends on your implementation approach, tinting can be done automatically, which means you only need one set of icons for one theme; or in my case, I choose to have multiple sets for simplicity.
 
 Let's start with a light theme for our app:
@@ -67,14 +67,14 @@ Let's start with a light theme for our app:
 </application>
 {% endhighlight %}
 
-Explanation for some theme attributes can be found on [Android Developers blog](http://android-developers.blogspot.sg/2014/10/appcompat-v21-material-design-for-pre.html).  
+Explanation for some theme attributes can be found on Android Developers blog[^android-blog].  
 
 <div class="bs-callout bs-callout-info">
   <h4>Tip</h4>
   Make a minimal app and try out the style attributes to see what attribute/value we need to set to achieve our desired theme first. As comprehensive as they are, Android documentations on theme attributes, especially with <code>appcompat</code>, are surprisingly lacking.
 </div>
 
-Options menu icons should have the same color as action bar text color, in our case it's specified via [`android:textColorPrimary`](http://developer.android.com/training/material/theme.html#StatusBar), and is `#FFFFFF`, so we should provide a set of white options menu icons for the action bar.  
+Options menu icons should have the same color as action bar text color, in our case it's specified via `android:textColorPrimary`[^theme], and is `#FFFFFF`, so we should provide a set of white options menu icons for the action bar.  
 
 <div class="bs-callout bs-callout-info">
   <h4>Tip</h4>
@@ -105,3 +105,8 @@ To enable consistent color, and make our views and texts ready for multiple them
 {% endhighlight %}
 
 That should be sufficient for a simple light-themed material design Android app. In the [second part]({% post_url 2015-02-25-support-multiple-themes-android-app-part-2 %}) of this blog post, we will make a dark theme and add setting to switch theme during runtime.
+
+---
+[^color-palette]: <http://www.google.com/design/spec/style/color.html#color-color-palette>
+[^android-blog]: <http://android-developers.blogspot.sg/2014/10/appcompat-v21-material-design-for-pre.html>
+[^theme]: <http://developer.android.com/training/material/theme.html#StatusBar>

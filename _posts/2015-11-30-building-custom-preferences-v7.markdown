@@ -8,18 +8,18 @@ tags: android view preference settings support
 github: materialistic
 ---
 
-*\* This article is meant for advanced UI customization of preferences. For basics, check out [Android API guide](http://developer.android.com/guide/topics/ui/settings.html).*
+*\* This article is meant for advanced UI customization of preferences. For basics, check out Android API guide[^settings-guide].*
 
 <div class="cap"></div>
 
-[Settings](http://www.google.com/design/spec/patterns/settings.html) or preferences are one of those semi-essential components that make our app feel more personal to users, by giving them choices to tailor their own experience. Preferences are especially popular in apps for 'power' users, where they are presented with a bloat of settings. They are also important in apps where users are opinionated in terms of what makes great experience, e.g. reading apps. Yet building a great settings section in Android has always been a source of pain, at least until recently.
+Settings[^settings-pattern] or preferences are one of those semi-essential components that make our app feel more personal to users, by giving them choices to tailor their own experience. Preferences are especially popular in apps for 'power' users, where they are presented with a bloat of settings. They are also important in apps where users are opinionated in terms of what makes great experience, e.g. reading apps. Yet building a great settings section in Android has always been a source of pain, at least until recently.
 
 Android SDK comes with 2 choices for developers who want to implement a settings screen, each has its own shortfalls:
 
-- [`PreferenceActivity`](https://developer.android.com/reference/android/preference/PreferenceActivity.html) may break our inheritance chain, and sorry but no [toolbar](http://www.google.com/design/spec/components/toolbars.html)
-- [`PreferenceFragment`](https://developer.android.com/reference/android/preference/PreferenceFragment.html) is only available from API 11
+- [`PreferenceActivity`][PreferenceActivity] may break our inheritance chain, and sorry but no toolbar[^toolbar]
+- [`PreferenceFragment`][PreferenceFragment] is only available from API 11
 
-Many just give up on this and either go for a bare-bone settings screen with horrible experience, or go the long way of having their own implementation. Here comes [preference-v7](https://developer.android.com/tools/support-library/features.html#v7-preference) to the rescue!
+Many just give up on this and either go for a bare-bone settings screen with horrible experience, or go the long way of having their own implementation. Here comes [preference-v7] to the rescue!
 
 <!--more-->[ ](#){: id="more"}
 
@@ -27,11 +27,11 @@ Many just give up on this and either go for a bare-bone settings screen with hor
 
 With the release of preference-v7, these have been adressed and there should be no excuses now for not implementing a good settings screen. As with other components of support library, preference-v7 provides the same set of implementation as Android SDK, with backward compatibility all the way back to API 7! This means that we get these components for free out of the box:
 
-- [`CheckBoxPreference`](https://developer.android.com/reference/android/support/v7/preference/CheckBoxPreference.html)
-- [`DialogPreference`](https://developer.android.com/reference/android/support/v7/preference/DialogPreference.html)
-- [`EditTextPreference`](https://developer.android.com/reference/android/support/v7/preference/EditTextPreference.html)
-- [`ListPreference`](https://developer.android.com/reference/android/support/v7/preference/ListPreference.html)
-- [`SwitchPreferenceCompat`](https://developer.android.com/reference/android/support/v7/preference/SwitchPreferenceCompat.html)
+- [`CheckBoxPreference`][CheckBoxPreference]
+- [`DialogPreference`][DialogPreference]
+- [`EditTextPreference`][EditTextPreference]
+- [`ListPreference`][ListPreference]
+- [`SwitchPreferenceCompat`][SwitchPreferenceCompat]
 
 These components alone should be more than enough to create a decent settings experience. We can basically go with `ListPreference` for anything with a list of choices, or the beautiful `SwitchPreferenceCompat` for anything toggle.
 
@@ -39,7 +39,7 @@ These components alone should be more than enough to create a decent settings ex
 
 <figcaption>Settings screen from Materialistic 1.x</figcaption>
 
-The above screenshot shows an earlier version of settings in [Materialistic](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic). Check out the implementation [here](https://github.com/hidroh/materialistic/blob/27/app/src/main/res/xml/preferences.xml) and [here](https://github.com/hidroh/materialistic/blob/27/app/src/main/java/io/github/hidroh/materialistic/SettingsFragment.java). All great, everything looks neat and material design! But as we add more preferences, each becomes harder to recognize in a long list of preferences. They all follow the same monotonous pattern. The default item layout is plain, and users are forced to go through a try-and-see cycle to get a taste of the change, which they will likely forget the next time.
+The above screenshot shows an earlier version of settings in [Materialistic]. Check out the implementation [here][Materialistic-preferences-xml] and [here][Materialistic-SettingsFragment-java]. All great, everything looks neat and material design! But as we add more preferences, each becomes harder to recognize in a long list of preferences. They all follow the same monotonous pattern. The default item layout is plain, and users are forced to go through a try-and-see cycle to get a taste of the change, which they will likely forget the next time.
 
 This calls for a more visual, instant preview of preferences. For example, a theme preference should reflect what each theme looks like (background & text color). A font preference should list each font in its very own typography. Or a list of text sizes should show how big each of them is.
 
@@ -57,17 +57,17 @@ What we need to do:
 
 - add preference-v7 to `build.gradle` as project dependency (of course!)
 - set `preferenceTheme` in our theme in `values/styles.xml`, this is required. We can use the default `@style/PreferenceThemeOverlay` as value for a start
-- extend [`android.support.v7.preference.Preference`](https://developer.android.com/reference/android/support/v7/preference/Preference.html). This is the base class for all preference widgets
-- inflate custom layout using [`setLayoutResource(int)`](https://developer.android.com/reference/android/support/v7/preference/Preference.html#setLayoutResource(int)) or [`setWidgetLayoutResource(int)`](https://developer.android.com/reference/android/support/v7/preference/Preference.html#setWidgetLayoutResource(int)) via constructor
-- override [`onBindViewHolder(PreferenceViewHolder)`](https://developer.android.com/reference/android/support/v7/preference/Preference.html#onBindViewHolder(android.support.v7.preference.PreferenceViewHolder)) with our view binding and click listener logic. We may need to disable the default click behavior if we want to click child view
+- extend [`android.support.v7.preference.Preference`][support-Preference]. This is the base class for all preference widgets
+- inflate custom layout using [`setLayoutResource(int)`][setLayoutResource] or [`setWidgetLayoutResource(int)`][setWidgetLayoutResource] via constructor
+- override [`onBindViewHolder(PreferenceViewHolder)`][onBindViewHolder] with our view binding and click listener logic. We may need to disable the default click behavior if we want to click child view
 
 ### A custom `SpinnerPreference`
 
-Using [uiautomatorviewer](https://developer.android.com/tools/testing-support-library/index.html#uia-viewer) to have a quick peek into how preference-v7 layouts setttings screen, we can see that internally it inflates a [`RecyclerView`](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html), where each preference is an item. And as with normal `RecyclerView` implementation, we are to override some sort of [`ViewHolder`](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html) create and bind logic. In this case, it's an instance of [`PreferenceViewHolder`](https://developer.android.com/reference/android/support/v7/preference/PreferenceViewHolder.html).
+Using [uiautomatorviewer] to have a quick peek into how preference-v7 layouts setttings screen, we can see that internally it inflates a [`RecyclerView`][RecyclerView], where each preference is an item. And as with normal `RecyclerView` implementation, we are to override some sort of [`ViewHolder`][ViewHolder] create and bind logic. In this case, it's an instance of [`PreferenceViewHolder`][PreferenceViewHolder].
 
 <img src="/assets/img/settings-uiautomatorviewer.png" class="img-responsive center-block" />
 
-So here goes! Let's call our custom preference `SpinnerPreference`, since a [Spinner](http://developer.android.com/guide/topics/ui/controls/spinner.html) control allows us to display a list of choices, as well as selected value.
+So here goes! Let's call our custom preference `SpinnerPreference`, since a Spinner[^spinner] control allows us to display a list of choices, as well as selected value.
 
 Our custom widget layout can be as simple as a single `AppCompatSpinner`. We set this layout as our preference's widget layout, which leaves the default title and summary for base class implementation.
 
@@ -102,7 +102,7 @@ public abstract class SpinnerPreference extends Preference {
 {% endhighlight %}
 </div>
 
-The default implementation should take care of inflating our custom widget layout, creating a `PreferenceViewHolder`, leaving us the task of binding it. Here we wire up the preference click logic to open `Spinner`'s dropdown, and give it a set of items, which can be passed through [custom attributes](http://developer.android.com/training/custom-views/create-view.html#customattr) `app:entries` and `app:entryValues`, similar to `android:entries` and `android:entryValues` of [`ListPreference`](https://developer.android.com/reference/android/support/v7/preference/ListPreference.html#lattrs). Clicking a spinner dropdown item will persist its corresponding value as string here, but it can be any of the supported types.
+The default implementation should take care of inflating our custom widget layout, creating a `PreferenceViewHolder`, leaving us the task of binding it. Here we wire up the preference click logic to open `Spinner`'s dropdown, and give it a set of items, which can be passed through custom attributes[^custom-attrs] `app:entries` and `app:entryValues`, similar to `android:entries` and `android:entryValues` of [`ListPreference`][support-ListPreference]. Clicking a spinner dropdown item will persist its corresponding value as string here, but it can be any of the supported types.
 
 <a href="#codeSpinnerPreferenceV2" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
@@ -335,12 +335,47 @@ values/arrays.xml
 
 <figcaption>Instant font preview!</figcaption>
 
-Head over to [Materialistic's Github repo](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic) for complete implementation of this and other custom preferences:
+Head over to [Materialistic's Github repo][Github] for complete implementation of this and other custom preferences:
 
-- abstract [`SpinnerPreference`](https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/preference/SpinnerPreference.java)
-- [`FontPreference`](https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/preference/FontPreference.java)
-- [`FontSizePreference`](https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/preference/FontSizePreference.java)
-- [`ThemePreference`](https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/preference/ThemePreference.java)
-- [`SettingsFragment`](https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/SettingsFragment.java)
-- [`xml/preferences.xml`](https://github.com/hidroh/materialistic/blob/34/app/src/main/res/xml/preferences.xml)
-- [`values/styles.xml`](https://github.com/hidroh/materialistic/blob/34/app/src/main/res/values/styles.xml#L22)
+- abstract [`SpinnerPreference`][Materialistic-SpinnerPreference-java]
+- [`FontPreference`][Materialistic-FontPreference-java]
+- [`FontSizePreference`][Materialistic-FontSizePreference-java]
+- [`ThemePreference`][Materialistic-ThemePreference-java]
+- [`SettingsFragment`][Materialistic-SettingsFragment-java-34]
+- [`xml/preferences.xml`][Materialistic-preferences-xml-34]
+- [`values/styles.xml`][Materialistic-styles-xml]
+
+---
+[^settings-guide]: <http://developer.android.com/guide/topics/ui/settings.html>
+[^settings-pattern]: <http://www.google.com/design/spec/patterns/settings.html>
+[^toolbar]: <http://www.google.com/design/spec/components/toolbars.html>
+[^spinner]: <http://developer.android.com/guide/topics/ui/controls/spinner.html>
+[^custom-attrs]: <http://developer.android.com/training/custom-views/create-view.html#customattr>
+[PreferenceActivity]: https://developer.android.com/reference/android/preference/PreferenceActivity.html
+[PreferenceFragment]: https://developer.android.com/reference/android/preference/PreferenceFragment.html
+[preference-v7]: https://developer.android.com/tools/support-library/features.html#v7-preference
+[CheckBoxPreference]: https://developer.android.com/reference/android/support/v7/preference/CheckBoxPreference.html
+[DialogPreference]: https://developer.android.com/reference/android/support/v7/preference/DialogPreference.html
+[EditTextPreference]: https://developer.android.com/reference/android/support/v7/preference/EditTextPreference.html
+[ListPreference]: https://developer.android.com/reference/android/support/v7/preference/ListPreference.html
+[SwitchPreferenceCompat]: https://developer.android.com/reference/android/support/v7/preference/SwitchPreferenceCompat.html
+[Materialistic]: https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic
+[Github]: https://github.com/hidroh/materialistic
+[support-Preference]: https://developer.android.com/reference/android/support/v7/preference/Preference.html
+[setLayoutResource]: https://developer.android.com/reference/android/support/v7/preference/Preference.html#setLayoutResource(int)
+[setWidgetLayoutResource]: https://developer.android.com/reference/android/support/v7/preference/Preference.html#setWidgetLayoutResource(int)
+[onBindViewHolder]: https://developer.android.com/reference/android/support/v7/preference/Preference.html#onBindViewHolder(android.support.v7.preference.PreferenceViewHolder)
+[uiautomatorviewer]: https://developer.android.com/tools/testing-support-library/index.html#uia-viewer
+[RecyclerView]: https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html
+[ViewHolder]: https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html
+[PreferenceViewHolder]: https://developer.android.com/reference/android/support/v7/preference/PreferenceViewHolder.html
+[support-ListPreference]: https://developer.android.com/reference/android/support/v7/preference/ListPreference.html#lattrs
+[Materialistic-preferences-xml]: https://github.com/hidroh/materialistic/blob/27/app/src/main/res/xml/preferences.xml
+[Materialistic-SettingsFragment-java]: https://github.com/hidroh/materialistic/blob/27/app/src/main/java/io/github/hidroh/materialistic/SettingsFragment.java
+[Materialistic-SpinnerPreference-java]: https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/preference/SpinnerPreference.java
+[Materialistic-FontPreference-java]: https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/preference/FontPreference.java
+[Materialistic-FontSizePreference-java]: https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/preference/FontSizePreference.java
+[Materialistic-ThemePreference-java]: https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/preference/ThemePreference.java
+[Materialistic-SettingsFragment-java-34]: https://github.com/hidroh/materialistic/blob/34/app/src/main/java/io/github/hidroh/materialistic/SettingsFragment.java
+[Materialistic-preferences-xml-34]: https://github.com/hidroh/materialistic/blob/34/app/src/main/res/xml/preferences.xml
+[Materialistic-styles-xml]: https://github.com/hidroh/materialistic/blob/34/app/src/main/res/values/styles.xml#L22

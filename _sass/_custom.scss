@@ -1,4 +1,6 @@
-a#more { display: block; position: relative; top: -$sizeNavbar; visibility: hidden; }
+a#more { display: block; position: relative; visibility: hidden; }
+a.footnote { margin-left: 5px; text-decoration: underline; }
+a#more, a.footnote { padding-top: $sizeNavbar; margin-top: -$sizeNavbar; }
 .video-portrait {width: 50.625vh; height: 90vh;} /* 9:16 */
 .video-landscape {width: 90vw; height: 50.625vw;} /* 16:9 */
 .divider { margin: $sizeMarginLg; }
@@ -12,4 +14,8 @@ a#more { display: block; position: relative; top: -$sizeNavbar; visibility: hidd
   line-height: 100%;
   font-weight: 700;
   padding-right: 8px;
+}
+.footnotes {
+  font-size: $sizeFontSm;
+  a { word-break: break-word; }
 }

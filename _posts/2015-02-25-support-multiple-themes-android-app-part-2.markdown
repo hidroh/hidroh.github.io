@@ -60,7 +60,7 @@ The two themes should have appropriate (different if applicable) values for base
 
 ### Theme-specific resources
 
-At this point, we should have a pretty decent dark theme for our app, except for some anomalies here and there, e.g. drawables used for action bar menu items. A dark action bar expects light-color menu items, and vice versa. In order to tell Android to use different drawables for different app themes, we create [custom attributes](http://developer.android.com/training/custom-views/create-view.html#customattr) that allow specifying reference to the correct drawable, and provide different drawable references as values for these custom attributes under different themes (the same way `appcompat` library provides custom attributes such as `colorPrimary`).
+At this point, we should have a pretty decent dark theme for our app, except for some anomalies here and there, e.g. drawables used for action bar menu items. A dark action bar expects light-color menu items, and vice versa. In order to tell Android to use different drawables for different app themes, we create custom attributes[^custom-attrs] that allow specifying reference to the correct drawable, and provide different drawable references as values for these custom attributes under different themes (the same way `appcompat` library provides custom attributes such as `colorPrimary`).
 
 **values/attrs.xml**
 {% highlight xml %}
@@ -100,7 +100,7 @@ At this point, we should have a pretty decent dark theme for our app, except for
 
 Similar implementation can be used to specify most custom attributes you need for theme specific resource values. One hiccup to this approach is that attribute resolving in drawable resources seems to be broken before API 21. For example, if you have a drawable which is a `layer-list` of colors, their values must be fixed for API <21. See [this commit](https://github.com/google/iosched/commit/dd7ed72a7eb2d223203db079bd99d31c6ef3061e) from Google I/O 2014 app for a fix.
 
-An alternative approach to avoid duplicating drawable resources for different themes is to use drawable `tint`. This attribute is available from API 21. [Dan Lew in his blog](http://blog.danlew.net/2014/08/18/fast-android-asset-theming-with-colorfilter/) shows how to do this for all API levels. Personally I would prefer to keep my Java implementation free of view logic if possible, so I choose to have different drawable resources per theme.
+An alternative approach to avoid duplicating drawable resources for different themes is to use drawable `tint`. This attribute is available from API 21. Dan Lew in his blog[^danlew] shows how to do this for all API levels. Personally I would prefer to keep my Java implementation free of view logic if possible, so I choose to have different drawable resources per theme.
 
 ### Dynamic theme switching
 
@@ -122,7 +122,7 @@ public abstract class BaseActivity extends ActionBarActivity {
 
 Here, since our app already has a default light theme, we only need to check if default preference has been overriden to override dark theme. The logic is put in the 'base' activity so it can be shared by all activities.
 
-Note that this approach will only apply theme for activities that are not in the [back stack](http://developer.android.com/guide/components/tasks-and-back-stack.html). For those that are already in current stack, they will still exhibit previous theme, as going back will only trigger `onResume()`. Depends on product requirements, the implementation to handle these 'stale' screens can be as simple as clearing the back stack, or restarting every single activity in the back stack upon preference change. Here we simply clear back stack and restart current activity upon theme change.
+Note that this approach will only apply theme for activities that are not in the back stack[^backstack]. For those that are already in current stack, they will still exhibit previous theme, as going back will only trigger `onResume()`. Depends on product requirements, the implementation to handle these 'stale' screens can be as simple as clearing the back stack, or restarting every single activity in the back stack upon preference change. Here we simply clear back stack and restart current activity upon theme change.
 
 **SettingsFragment.java**
 {% highlight java %}
@@ -151,3 +151,8 @@ public class SettingsFragment extends PreferenceFragment {
 {% endhighlight %}
 
 So that's it. Now we have an app with two polished themes for even the most picky users! Head over to [hidroh/materialistic](https://github.com/hidroh/materialistic) GitHub repository to checkout complete implementation!
+
+---
+[^custom-attrs]: <http://developer.android.com/training/custom-views/create-view.html#customattr>
+[^danlew]: <http://blog.danlew.net/2014/08/18/fast-android-asset-theming-with-colorfilter/>
+[^backstack]: <http://developer.android.com/guide/components/tasks-and-back-stack.html>

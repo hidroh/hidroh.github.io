@@ -16,6 +16,7 @@ a { color: $textColorLink; }
 a:hover { color: $textColorLinkHover; }
 pre { border: $sizeBorder solid $colorDivider; }
 code { color: $textColorPrimary; background-color: $colorDivider; }
+article>hr { border-top: $sizeBorder solid $colorDivider; width: 25%; }
 .divider { border-bottom: $sizeBorder solid $colorDivider; }
 .fa-facebook { color: $brandColorFacebook; }
 .fa-get-pocket { color: $brandColorPocket; }

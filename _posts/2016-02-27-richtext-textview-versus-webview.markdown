@@ -10,11 +10,11 @@ github: richtext
 
 <div class="cap"></div>
 
-So, say we have a piece of rich text, most probably in the form of HTML (e.g. a simplified HTML made for mobile reading), what kind of widget is best used to display it? How do we achieve the flexible yet rich reading experience from popular mobile readers like Readability, Pocket, or [Materialistic](https://github.com/hidroh/materialistic) (!)?
+So, say we have a piece of rich text, most probably in the form of HTML (e.g. a simplified HTML made for mobile reading), what kind of widget is best used to display it? How do we achieve the flexible yet rich reading experience from popular mobile readers like Readability, Pocket, or [Materialistic] (!)?
 
-In this article, we will explore two very popular and powerful widgets that has been available since API 1: [`TextView`](https://developer.android.com/reference/android/widget/TextView.html) and [`WebView`](https://developer.android.com/reference/android/webkit/WebView.html), for the purpose of rich text rendering. The article does not aim to provide a comprehensive comparison, but rather touches on several critical desicion making points.
+In this article, we will explore two very popular and powerful widgets that has been available since API 1: [`TextView`][TextView] and [`WebView`][WebView], for the purpose of rich text rendering. The article does not aim to provide a comprehensive comparison, but rather touches on several critical desicion making points.
 
-For the sake of comparison, let's assume that we are given the task of displaying [the following image-intensive article](http://www.propertyguru.com.sg/property-management-news/2015/11/111633/7-small-spaces-to-call-home), styled to specific background color, text size and color. We will first try to use available APIs in `TextView` and `WebView` to render the given HTML in the same, comparable way, then analyze their performance: memory, GPU and CPU consumption. Example code can be found [here](https://github.com/hidroh/richtext).
+For the sake of comparison, let's assume that we are given the task of displaying [the following image-intensive article][example], styled to specific background color, text size and color. We will first try to use available APIs in `TextView` and `WebView` to render the given HTML in the same, comparable way, then analyze their performance: memory, GPU and CPU consumption. Example code can be found [here][Github].
 
 <a href="/assets/img/textview-webview-sample.png"><img src="/assets/img/textview-webview-sample.png" class="img-responsive center-block img-thumbnail" style="max-height:320px" /></a>
 
@@ -24,14 +24,14 @@ For the sake of comparison, let's assume that we are given the task of displayin
 
 First let's quickly get through the basics. By the way they are named, it is quite obvious that `TextView` is meant for text rendering, while `WebView` is for webpage rendering. With proper use of their APIs however, we can quickly turn both of them into flexible widgets that can render rich text with images.
 
-* Use [`Html.fromHtml(String, ImageGetter, TagHandler)`](https://developer.android.com/intl/es/reference/android/text/Html.html#fromHtml(java.lang.String, android.text.Html.ImageGetter, android.text.Html.TagHandler)) to parse HTML string into `TextView`
-* Use [`WebView.loadDataWithBaseURL()`](https://developer.android.com/intl/es/reference/android/webkit/WebView.html#loadDataWithBaseURL(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)) to load HTML string into `WebView`
+* Use [`Html.fromHtml(String, ImageGetter, TagHandler)`][fromHtml] to parse HTML string into `TextView`
+* Use [`WebView.loadDataWithBaseURL()`][loadDataWithBaseURL] to load HTML string into `WebView`
 
 **TextView**
 
-`TextVew`, with default support for [`Spanned`](https://developer.android.com/reference/android/text/Spanned.html), an interface for markup text, allows very fine-grained format options over any range of text. It also exposes a bunch of styling attributes, e.g. `textAppearance`, and APIs for controlling text appearance. Check out [Flavien Laurent](http://flavienlaurent.com/blog/2014/01/31/spans/)'s and [Chiu-Ki Chan](http://chiuki.github.io/advanced-android-textview/)'s excellent materials on advanced uses of `TextView` and `Spanned`.
+`TextVew`, with default support for [`Spanned`][Spanned], an interface for markup text, allows very fine-grained format options over any range of text. It also exposes a bunch of styling attributes, e.g. `textAppearance`, and APIs for controlling text appearance. Check out Flavien Laurent[^flaurent]'s and Chiu-Ki Chan[^chiuki]'s excellent materials on advanced uses of `TextView` and `Spanned`.
 
-When it comes to rich text however, `TextView` shows certain limitations that we may want to weigh up before considering using it: it only handles a [limited set of HTML tags](https://commonsware.com/blog/Android/2010/05/26/html-tags-supported-by-textview.html), which should be sufficient in most cases; and we have to handle fetching embedded remote images by ourselves, via an [`ImageGetter`](https://developer.android.com/intl/es/reference/android/text/Html.ImageGetter.html) instance; and intercept hyperlinks by using [`LinkMovementMethod`](https://developer.android.com/reference/android/text/method/LinkMovementMethod.html). Whew!
+When it comes to rich text however, `TextView` shows certain limitations that we may want to weigh up before considering using it: it only handles a [limited set of HTML tags][TextView tags], which should be sufficient in most cases; and we have to handle fetching embedded remote images by ourselves, via an [`ImageGetter`][ImageGetter] instance; and intercept hyperlinks by using [`LinkMovementMethod`][LinkMovementMethod]. Whew!
 
 <a href="#codeTextView" class="btn btn-default" data-toggle="collapse">Toggle code <i class="fa fa-code"></i></a>
 
@@ -228,7 +228,7 @@ As seen from the performance monitor screenshots, `TextView` consumes significan
 
 The example article has 7 images of various sizes with a combined file sizes of 2MB which would become bitmaps in memory. The amount of memory needed depends on how we sample or resize the fetched images, but all of them will need to be in memory at the same time regardless. If we have an article which holds an arbitrary number of images, we may run into the dreaded `OutOfMemoryException` very quickly. Thus for this use case, `TextView` is a clear no go.
 
-On the other hand, `WebView` historically has been optimized to be memory efficient. [Under the hood](https://medium.com/@camaelon/what-s-in-a-web-browser-83793b51df6c) (*highly recommended read!*), it loads content into tiles visible on screen and recycles them as we scroll, resulting in incredibly low memory profile. However, it needs to use more GPU and CPU to process and draw those tiles into pixels on the fly, probably explaining why it consumes more GPU and CPU than `TextView`.
+On the other hand, `WebView` historically has been optimized to be memory efficient. Under the hood[^medium] (*highly recommended read!*), it loads content into tiles visible on screen and recycles them as we scroll, resulting in incredibly low memory profile. However, it needs to use more GPU and CPU to process and draw those tiles into pixels on the fly, probably explaining why it consumes more GPU and CPU than `TextView`.
 
 So the trade-off here is between memory versus CPU & GPU consumption.
 
@@ -246,3 +246,19 @@ Another side effect of `WebView` is that users may see some pixelated effects wh
 Both widgets have its highs and lows when it comes to rich text rendering. For arbitrary HTML, my choice would be to favor `WebView` over `TextView` for its low memory consumption and native support for HTML content. Basic HTML and CSS knowledge would be needed, but knowing them will benefit you anyway. If the HTML content is known to be limited to certain tags without images (e.g. forum posts), `TextView` would be a more sensible choice.
 
 The article explores a simple layout where both widgets occupy the whole screen. Things may change in a much more complicated way when we place them in a layout hierarchy together with other widgets. Try it out and profile to see what works for you!
+
+---
+[^chiuki]: <http://chiuki.github.io/advanced-android-textview/>
+[^flaurent]: <http://flavienlaurent.com/blog/2014/01/31/spans/>
+[^medium]: <https://medium.com/@camaelon/what-s-in-a-web-browser-83793b51df6c>
+[Materialistic]: https://github.com/hidroh/materialistic
+[example]: http://www.propertyguru.com.sg/property-management-news/2015/11/111633/7-small-spaces-to-call-home
+[Github]: https://github.com/hidroh/richtext
+[TextView]: https://developer.android.com/reference/android/widget/TextView.html
+[WebView]: https://developer.android.com/reference/android/webkit/WebView.html
+[fromHtml]: https://developer.android.com/reference/android/text/Html.html#fromHtml(java.lang.String, android.text.Html.ImageGetter, android.text.Html.TagHandler)
+[loadDataWithBaseURL]: https://developer.android.com/reference/android/webkit/WebView.html#loadDataWithBaseURL(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+[Spanned]: https://developer.android.com/reference/android/text/Spanned.html
+[TextView tags]: https://commonsware.com/blog/Android/2010/05/26/html-tags-supported-by-textview.html
+[ImageGetter]: https://developer.android.com/reference/android/text/Html.ImageGetter.html
+[LinkMovementMethod]: https://developer.android.com/reference/android/text/method/LinkMovementMethod.html
