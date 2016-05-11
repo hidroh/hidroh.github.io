@@ -1,6 +1,7 @@
 ---
 layout: cv
-title: Ha Duy Trung
+title: Ha Duy Trung CV
+description: Ha Duy Trung CV
 ---
 # Duy Trung Ha
 

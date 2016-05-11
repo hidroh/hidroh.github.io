@@ -2,10 +2,10 @@
 layout: post
 title:  "Rich text battle: TextView vs WebView"
 date:   2016-02-27 14:53:34
-summary: "An analysis of using TextView versus WebView to display HTML content"
+description: "An analysis of using TextView versus WebView to display HTML content"
+image: /assets/img/rendering_webview.png
 tags: android view textview webview performance html memory gpu cpu
 github: richtext
-image: /assets/img/rendering_webview.png
 ---
 
 <div class="cap"></div>

@@ -2,7 +2,7 @@
 layout: post
 title:  "Test your external API like a boss with Cucumber"
 date:   2015-03-08 2:40:34
-summary: "Introducing an extension to Cucumber that allows BDD-style testing of API"
+description: "Introducing an extension to Cucumber that allows BDD-style testing of API"
 tags: bdd cucumber api testing ruby gem rubygem
 github: cucumber-api
 ---

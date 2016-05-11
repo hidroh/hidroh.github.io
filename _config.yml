@@ -1,8 +1,16 @@
-name: Ha Duy Trung
-url: https://hidroh.github.io
+title: "Ha Duy Trung's Blog"
 description: Tips and tricks, useful patterns and implementations for Android
+url: https://hidroh.github.io
 author: Ha Duy Trung
-keywords: Android, Technical blog, Java, hidroh, Materialistic, Ha Duy Trung
+twitter:
+  username: hadt
+social:
+  name: Ha Duy Trung
+  links:
+    - https://twitter.com/hadt
+    - https://github.com/hidroh
+    - https://www.linkedin.com/in/trunghd
+    - https://stackoverflow.com/users/836540/hidro
 
 permalink: /:year/:month/:day/:title/
 paginate: 5
@@ -12,5 +20,6 @@ excerpt_separator: <!--more-->
 gems:
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-seo-tag
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'CNAME']

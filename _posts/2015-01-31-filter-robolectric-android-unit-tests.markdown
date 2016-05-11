@@ -2,7 +2,7 @@
 layout: post
 title:  "Filter Robolectric Android unit tests for faster verification"
 date:   2015-01-31 02:20:34
-summary: "Customizing Robolectric Gradle plugin to run only a subset of unit tests"
+description: "Customizing Robolectric Gradle plugin to run only a subset of unit tests"
 tags: android gradle robolectric unit-test
 ---
 

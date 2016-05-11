@@ -2,10 +2,10 @@
 layout: post
 title:  "Supporting multiple themes in your Android app (Part 2)"
 date:   2015-02-25 3:40:34
-summary: "Constructing theme and style resources to create a multiple-theme Android app"
+description: "Constructing theme and style resources to create a multiple-theme Android app"
+image: /assets/img/themes.png
 tags: android resources theme styleable
 github: materialistic
-image: /assets/img/themes.png
 ---
 
 <div class="cap"></div>

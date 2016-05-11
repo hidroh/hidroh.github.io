@@ -2,9 +2,9 @@
 layout: post
 title:  "Boost up development with a local sandbox server"
 date:   2015-03-22 4:40:34
-summary: "Quickly constructing a local sandbox server mirroring production web services for faster app development"
-tags: android ruby api sinatra testing sandbox
+description: "Quickly constructing a local sandbox server mirroring production web services for faster app development"
 image: /assets/img/chuck-norris-test-production.jpg
+tags: android ruby api sinatra testing sandbox
 github: hackernews-sandbox
 ---
 

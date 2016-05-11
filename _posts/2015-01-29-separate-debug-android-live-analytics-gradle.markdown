@@ -2,7 +2,7 @@
 layout: post
 title:  "How to: Separate your debug Android activities from your live Analytics with Gradle"
 date:   2015-01-29 10:44:34
-summary: "Utilizing Gradle build types to inject different configurations for separating analytics tracking for different build types"
+description: "Utilizing Gradle build types to inject different configurations for separating analytics tracking for different build types"
 tags: android gradle google-analytics
 ---
 

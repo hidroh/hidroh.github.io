@@ -2,10 +2,10 @@
 layout: post
 title:  "Building custom preferences with preference-v7"
 date:   2015-11-30 14:53:34
-summary: "Visual and material design preferences made easy"
+description: "Visual and material design preferences made easy"
+image: /assets/img/settings.png
 tags: android view preference settings support
 github: materialistic
-image: /assets/img/settings.png
 ---
 
 *\* This article is meant for advanced UI customization of preferences. For basics, check out [Android API guide](http://developer.android.com/guide/topics/ui/settings.html).*

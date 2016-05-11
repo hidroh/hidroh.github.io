@@ -2,7 +2,7 @@
 layout: post
 title:  "A better analytics tracking for your app"
 date:   2015-03-14 16:40:34
-summary: "Migrating from Google Analytics to Google Tag Manager to future proof analytics tracking logic"
+description: "Migrating from Google Analytics to Google Tag Manager to future proof analytics tracking logic"
 tags: google-analytics google-tagmanager android patterns
 ---
 

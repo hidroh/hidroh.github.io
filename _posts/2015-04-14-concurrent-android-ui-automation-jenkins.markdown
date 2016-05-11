@@ -2,9 +2,9 @@
 layout: post
 title:  "Concurrent Android UI automation with Jenkins"
 date:   2015-04-14 10:07:34
-summary: "Using multiple Android devices to execute concurrent Calabash Android automation tests via Jenkins CI"
-tags: android testing calabash jenkins automation parallel concurrent
+description: "Using multiple Android devices to execute concurrent Calabash Android automation tests via Jenkins CI"
 image: /assets/img/parallel-cover.jpg
+tags: android testing calabash jenkins automation parallel concurrent
 ---
 
 <img src="/assets/img/parallel-cover.jpg" class="img-responsive center-block" />

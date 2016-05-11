@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Blogroll
-summary: My blog and web bookmarks
+description: My blog and web bookmarks
 blogroll:
   -
     title: "Developing for Android"
