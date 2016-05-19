@@ -164,7 +164,7 @@ public class AdBlocker {
 }
 {% endhighlight %}
 
-That's fun! Add an adress bar, a progress bar, a few standard browser buttons and you now have an ad-free Android web browser, built by yourself! The solution is not as comprehensive as uBlock Origin or AdBlock, but it should remove enough distraction. Check out a demo below:
+Check out a demo below:
 
 <div class="container">
     <div class="row">
@@ -174,6 +174,8 @@ That's fun! Add an adress bar, a progress bar, a few standard browser buttons an
         </div>
     </div>
 </div>
+
+That's fun! Add an adress bar, a progress bar, a few standard browser buttons and you now have an ad-free Android web browser, built by yourself! The solution is not as comprehensive as uBlock Origin or AdBlock, but it should remove enough distraction.
 
 A complete implementation can be found on Materialistic's [Github] repository:
 
