@@ -81,7 +81,7 @@ blogroll:
     host: weblogs.java.net
 ---
 
-<h1>{{ page.title }}<br/><small>{{ page.summary }}</small></h1>
+<h1>{{ page.title }}<br/><small>{{ page.description }}</small></h1>
 
 {% for post in page.blogroll %}
 <h4>
