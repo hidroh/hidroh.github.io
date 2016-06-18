@@ -12,11 +12,11 @@ github: materialistic
 
 In the [first part]({% post_url 2015-02-16-support-multiple-themes-android-app %}) of this post, we have created a light theme and made initial preparation to support multiple themes. In this blog post, we will continue that effort, creating another theme and allowing dynamic switching of themes during runtime.
 
+<!--more-->[ ](#){: id="more"}
+
 Ideally, if we treat theme as a configuration, we should be able to specify theme-specific resources under a 'theme-qualifier' resources directory, e.g. `values-dark` for dark theme resources and `values-light` for light theme resources. Unfortunately, this is not yet an option at the time of this post.
 
 So how should we specify resources for multiple themes? If we look at how resources are organized in [`appcompat`](https://github.com/android/platform_frameworks_support/blob/master/v7/appcompat/res/values/styles.xml), we will have a rough idea of how the Android team organize their theme specific resources. [Materialistic](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic) also employs a similar approach.
-
-<!--more-->[ ](#){: id="more"}
 
 ### Theming
 

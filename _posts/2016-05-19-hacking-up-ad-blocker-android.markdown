@@ -10,11 +10,11 @@ tags: android webview adblocker
 
 I was shuffling to catch up with news waiting for Google I/O 2016 to start (which was 1AM my timezone), while an idea just popped up: let's build an ad blocker to browse news in my phone without the unwanted distraction!
 
+<!--more-->[ ](#){: id="more"}
+
 Some brainstorming needed here. We're gonna need to prevent `WebView` from loading ads, or unwanted resources, when it tries to load a webpage. A little digging into `WebView` documentation leads us to `WebViewClient`[^1]. We can use `shouldInterceptRequest()` to intercept each request issued by a webpage, check its URL and decide whether we want to load resources from that URL.
 
 Now how do we identify if resources from a URL are potentially ads? Let's check how popular ad blockers like [uBlock Origin] or AdBlock do it: they both have a few black lists of things to filter. [Easylist], EasyPrivacy, etc are some well known ones, but are overkill for our needs: they specify sites with CSS selectors, while we only have a URL to work with here. [pgl.yoyo.org] list[^2] used by uBlock Origin seems to be promising though: it generates all hostnames considered ad servers. Now we only need to match blacklisted hostnames with our URL!
-
-<!--more-->[ ](#){: id="more"}
 
 **TL;DR**
 

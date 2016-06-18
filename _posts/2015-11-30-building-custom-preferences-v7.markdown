@@ -14,14 +14,14 @@ github: materialistic
 
 Settings[^settings-pattern] or preferences are one of those semi-essential components that make our app feel more personal to users, by giving them choices to tailor their own experience. Preferences are especially popular in apps for 'power' users, where they are presented with a bloat of settings. They are also important in apps where users are opinionated in terms of what makes great experience, e.g. reading apps. Yet building a great settings section in Android has always been a source of pain, at least until recently.
 
+<!--more-->[ ](#){: id="more"}
+
 Android SDK comes with 2 choices for developers who want to implement a settings screen, each has its own shortfalls:
 
 - [`PreferenceActivity`][PreferenceActivity] may break our inheritance chain, and sorry but no toolbar[^toolbar]
 - [`PreferenceFragment`][PreferenceFragment] is only available from API 11
 
 Many just give up on this and either go for a bare-bone settings screen with horrible experience, or go the long way of having their own implementation. Here comes [preference-v7] to the rescue!
-
-<!--more-->[ ](#){: id="more"}
 
 ### preference-v7
 

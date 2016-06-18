@@ -14,11 +14,11 @@ So, say we have a piece of rich text, most probably in the form of HTML (e.g. a 
 
 In this article, we will explore two very popular and powerful widgets that has been available since API 1: [`TextView`][TextView] and [`WebView`][WebView], for the purpose of rich text rendering. The article does not aim to provide a comprehensive comparison, but rather touches on several critical desicion making points.
 
+<!--more-->[ ](#){: id="more"}
+
 For the sake of comparison, let's assume that we are given the task of displaying [the following image-intensive article][example], styled to specific background color, text size and color. We will first try to use available APIs in `TextView` and `WebView` to render the given HTML in the same, comparable way, then analyze their performance: memory, GPU and CPU consumption. Example code can be found [here][Github].
 
 <a href="/assets/img/textview-webview-sample.png"><img src="/assets/img/textview-webview-sample.png" class="img-responsive center-block img-thumbnail" style="max-height:320px" /></a>
-
-<!--more-->[ ](#){: id="more"}
 
 ### The basics
 
