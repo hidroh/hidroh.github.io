@@ -129,7 +129,7 @@ class Item {
   ...
   @Override
   public int hashCode() {
-    return value;
+    return id;
   }
   
   @Override
