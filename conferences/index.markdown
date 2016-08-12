@@ -25,6 +25,13 @@ talks:
     speakerdeck: 5b318822f03d4c689ea6aa790c26e69e
     github: devunwired/coordinated-effort
     tags: [coordinator-layout, ui, nested-scrolling, droidcon]
+  -
+    title: "Advanced techniques for concurrency & memory management"
+    conference: DroidCon SF 2016
+    author: Nabil Hachicha
+    youtube: dmABlLsF76s
+    speakerdeck: 9a874b04542e4223af5370fdd917eda0
+    tags: [memory, threading, gc, droidcon]
 ---
 <style>
   .speakerdeck-iframe { width: 560px; height: 315px; }
