@@ -10,6 +10,10 @@ talks:
     youtube: 7mVRZqsozPw
     speakerdeck: ca59957899cf4aae815754096b10cbeb
     tags: [dagger, dependency-injection, droidcon, square]
+    also:
+      -
+        title: "DIY: Build Your Own Dependency Injection Library"
+        url: "https://realm.io/news/android-pierre-yves-ricau-build-own-dependency-injection/"
   -
     title: "Common RxJava Mistakes"
     conference: DroidCon SF 2016
@@ -68,6 +72,17 @@ talks:
     </div>
   </div>
 </div>
+
+{% if post.also %}
+<h4>
+  <small>
+    See also:
+    {% for also in post.also %}
+    {% if forloop.index0 > 0 %}, {% endif %}<a href="{{ also.url }}">{{ also.title }}</a>
+    {% endfor %}
+  </small>
+</h4>
+{% endif %}
 
 <div class="clearfix divider"></div>
 
