@@ -4,6 +4,12 @@ title: Conferences
 description: Collection of useful conference talks
 talks:
   -
+    title: "Exploring Java's Hidden Costs"
+    conference: 360AnDev 2016
+    author: Jake Wharton
+    url: "https://realm.io/news/360andev-jake-wharton-java-hidden-costs-android/"
+    tags: [java, dex, hashmap, nested-class]
+  -
     title: "Sharper Better Faster Dagger"
     conference: DroidCon SF 2016
     author: John Rodriguez
@@ -45,7 +51,11 @@ talks:
 
 {% for post in page.talks %}
 <h4>
+  {% if post.url %}
+  <a href="{{ post.url }}">{{ post.title }}</a>
+  {% else %}
   <a href="#{{ forloop.index0 }}" data-toggle="collapse">{{ post.title }}</a>
+  {% endif %}
   <small>
   <i class="fa fa-calendar"></i> {{ post.conference }}
   -
@@ -62,6 +72,7 @@ talks:
 {% endif %}
 </div>
 
+{% unless post.url %}
 <div class="collapse" id="{{ forloop.index0 }}">
   <div class="container">
     <div class="row">
@@ -72,6 +83,7 @@ talks:
     </div>
   </div>
 </div>
+{% endunless %}
 
 {% if post.also %}
 <h4>
