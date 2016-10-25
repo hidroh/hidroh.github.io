@@ -42,6 +42,12 @@ talks:
     youtube: dmABlLsF76s
     speakerdeck: 9a874b04542e4223af5370fdd917eda0
     tags: [memory, threading, gc, droidcon]
+  -
+    title: "How the Main Thread works"
+    conference: Droidcon NYC 2015
+    author: Michael Bailey
+    youtube: aFGbv9Ih9qQ
+    tags: [thread, looper, handler, droidcon]
 ---
 <style>
   .speakerdeck-iframe { width: 560px; height: 315px; }
