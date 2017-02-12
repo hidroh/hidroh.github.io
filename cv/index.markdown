@@ -13,7 +13,7 @@ description: Ha Duy Trung CV
 
 ## Summary
 
-Android engineer (2+ years), with past full-stack web development experience in PHP, Ruby and C# (4+ years). My experience includes exposure to Scrum agile framework, unit testing and test-driven development (TDD), behavior-driven development (BDD) and automation. I love writing code as much as testing them.
+Android engineer, with past full-stack web development experience in PHP, Ruby and C#. My experience includes exposure to Scrum agile framework, unit testing and test-driven development (TDD), behavior-driven development (BDD) and automation. I love writing code as much as testing them.
 
 Outside work, I contribute to open-source projects and technical communities. List of my works can be found in Portfolio section of this document. My notable open-source contributions:
 
@@ -23,13 +23,22 @@ Outside work, I contribute to open-source projects and technical communities. Li
 ## Experience
 
 <div class="row">
+    <div class="col-xs-8 section-left">Microsoft</div>
+    <div class="col-xs-4 section-right">02/2017 - Present</div>
+</div>
+
+*Senior Android Engineer (SDE 2)*
+
+Outlook Mobile
+
+<div class="row">
     <div class="col-xs-8 section-left">PropertyGuru</div>
-    <div class="col-xs-4 section-right">03/2014 - Present</div>
+    <div class="col-xs-4 section-right">03/2014 - 01/2017</div>
 </div>
 
 *Android Engineer*
 
-Develop and ship Android applications for property search (consumer) and management (agent) for South East Asian market: 7 apps in 4 countries, 3 languages
+Develop and ship Android applications for property search (consumer) and management (agent) for South East Asian market: 8 apps in 4 countries, 3 languages
 
 * Android development in Java using Android SDK, build with Gradle
 * Unit testing with Robolectric, UI automation with Cucumber, Calabash (Ruby)
@@ -50,7 +59,7 @@ Develop RESTful web services, search and consumer web products, and mobile site 
 
 <div class="row">
     <div class="col-xs-8 section-left">GRC-Systems</div>
-    <div class="col-xs-4 section-right">01/2011 - 05/2012</div>
+    <div class="col-xs-4 section-right">01/2011 - 06/2012</div>
 </div>
 
 *Software Engineer*
@@ -58,8 +67,6 @@ Develop RESTful web services, search and consumer web products, and mobile site 
 Develop governance, risk management and compliance Rich-Internet-Application (RIA)
 
 * Full stack C# development: stack includes Microsoft Silverlight, Windows Communication Foundation (WCF), Workflow Foundation (WF), Entity Framework and Windows Azure
-
-(2 recommendations available upon request)
 
 <div class="row">
     <div class="col-xs-8 section-left">Dept of Computer Science, School of Computing, National University of Singapore</div>
@@ -71,8 +78,6 @@ Develop governance, risk management and compliance Rich-Internet-Application (RI
 Academic research with focus on software reuse, domain-specific language (DSL) and model-driven development (MDD)
 
 * 1 publication at top software engineering conference
-
-(1 recommendation available upon request)
 
 ## Education
 
