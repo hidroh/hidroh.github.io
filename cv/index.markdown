@@ -13,12 +13,7 @@ description: Ha Duy Trung CV
 
 ## Summary
 
-Android engineer, with past full-stack web development experience in PHP, Ruby and C#. My experience includes exposure to Scrum agile framework, unit testing and test-driven development (TDD), behavior-driven development (BDD) and automation. I love writing code as much as testing them.
-
-Outside work, I contribute to open-source projects and technical communities. List of my works can be found in Portfolio section of this document. My notable open-source contributions:
-
-* <https://github.com/hidroh/materialistic> - Android application
-* <https://github.com/hidroh/cucumber-api> - Ruby gem
+Android engineer, with past full-stack web development experience. My experience includes exposure to Scrum agile framework, unit testing and test-driven development (TDD), behavior-driven development (BDD) and automation. I love writing code as much as testing them. Outside work, I contribute to open-source projects and technical communities. List of my works can be found in Portfolio section of this document.
 
 ## Experience
 
@@ -29,7 +24,7 @@ Outside work, I contribute to open-source projects and technical communities. Li
 
 *Senior Android Engineer (SDE 2)*
 
-Outlook Mobile
+Outlook Mobile.
 
 <div class="row">
     <div class="col-xs-8 section-left">PropertyGuru</div>
@@ -38,11 +33,7 @@ Outlook Mobile
 
 *Android Engineer*
 
-Develop and ship Android applications for property search (consumer) and management (agent) for South East Asian market: 8 apps in 4 countries, 3 languages
-
-* Android development in Java using Android SDK, build with Gradle
-* Unit testing with Robolectric, UI automation with Cucumber, Calabash (Ruby)
-* Continuous integration with Jenkins
+Regional Android property apps (consumer and agent): 8 apps in 4 countries, 3 languages.
 
 <div class="row">
     <div class="col-xs-8 section-left">PropertyGuru</div>
@@ -51,11 +42,7 @@ Develop and ship Android applications for property search (consumer) and managem
 
 *Software Engineer*
 
-Develop RESTful web services, search and consumer web products, and mobile site for South East Asian market
-
-* Front-end and back-end PHP development: stack includes PHP, Symfony2 framework, MySQL, nginx
-* Unit testing, behavior testing with PHPUnit, Jasmine, Codeception
-* Continuous integration with Jenkins
+Regional property websites (consumer), mobile sites and web services.
 
 <div class="row">
     <div class="col-xs-8 section-left">GRC-Systems</div>
@@ -64,9 +51,7 @@ Develop RESTful web services, search and consumer web products, and mobile site 
 
 *Software Engineer*
 
-Develop governance, risk management and compliance Rich-Internet-Application (RIA)
-
-* Full stack C# development: stack includes Microsoft Silverlight, Windows Communication Foundation (WCF), Workflow Foundation (WF), Entity Framework and Windows Azure
+Cloud/on-premise Rich-Internet-Application (RIA) for governance, risk management and compliance clients.
 
 <div class="row">
     <div class="col-xs-8 section-left">Dept of Computer Science, School of Computing, National University of Singapore</div>
