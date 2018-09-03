@@ -22,7 +22,7 @@ Android engineer, with past full-stack web development experience. My experience
     <div class="col-xs-4 section-right">02/2017 - Present</div>
 </div>
 
-*Senior Android Engineer (SDE 2)*
+*Senior Android Engineer*
 
 Outlook Mobile.
 
@@ -79,17 +79,6 @@ Academic research with focus on software reuse, domain-specific language (DSL) a
 </div>
 
 *Bachelor's Degree (Honours), Computer Engineering*
-
-## Personal Details
-
-**Nationality:** Vietnamese
-
-* Require Visa sponsorship for US (H1B), UK, Canada and Australia
-
-**Languages**
-
-* English (Full professional proficiency)
-* Vietnamese (Native or bilingual proficiency)
 
 ## Portfolio
 
