@@ -73,17 +73,6 @@ layout: default
   </ul>
 </div>
 
-<button class="btn btn-default btn-lg" data-toggle="collapse" data-target="#disqus_thread">
-  Comments
-  <span class="badge disqus-comment-count" data-disqus-url="{{ site.url }}/{{ page.url }}">
-    {% if jekyll.environment == "development" %}10{% endif %}
-  </span>
-</button>
-
-<div id="disqus_thread" class="collapse">
-  {% if jekyll.environment == "development" %}Disqus comments{% endif %}
-</div>
-
 <div class="clearfix divider"></div>
 
 <nav>
@@ -102,18 +91,3 @@ layout: default
 <script type="text/javascript">
   $('article').readingTime();
 </script>
-{% if jekyll.environment != "development" %}
-<script src="//hidroh.disqus.com/count.js" async></script>
-<script type="text/javascript">
-  var disqus_shortname = 'hidroh';
-  var disqus_url = '{{ site.url }}/{{ page.url }}';
-
-  /* * * DON'T EDIT BELOW THIS LINE * * */
-  (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-{% endif %}
