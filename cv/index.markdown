@@ -82,6 +82,10 @@ Academic research with focus on software reuse, domain-specific language (DSL) a
 
 ## Portfolio
 
+**NearbyTutors - Android application**
+
+* <https://play.google.com/store/apps/details?id=com.nearbytutors.android>
+
 **Materialistic – Android application (open source)**
 
 * <https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic>
